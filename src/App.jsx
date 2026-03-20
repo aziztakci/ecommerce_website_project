@@ -1,14 +1,16 @@
-import { Camera } from 'lucide-react'
-import React from 'react'
+import { Camera } from "lucide-react";
+import React from "react";
+import GlobalContextProvider from "./contexts/globalContext";
+import Layout from "./layout/Layout";
 
 export default function App() {
   return (
-    <div>
-      <h1 className="text-3xl text-alert bg-faded-secondary-1 font-aleo font-bold underline">
-    Tailwind Test....
+    <GlobalContextProvider>
+      <Layout>
+        <h1 class="text-3xl font-bold underline">
+    Tailwind Test......
   </h1>
-  <Camera color="red" size={48} />;
-    </div>
-  )
+      </Layout>
+    </GlobalContextProvider>
+  );
 }
-
