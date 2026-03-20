@@ -1,16 +1,21 @@
-# React + Vite
+## ECOMMERCE WEBSITE PROJECT
+A professional, high-performance e-commerce application built with **React 19** and **Tailwind CSS v4.2**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Live Demo
+You can view the live project here: https://ecommerce-website-project-wine.vercel.app/
 
-Currently, two official plugins are available:
+## 🛠 Tech Stack
+* **Framework:** React 19 (Vite)
+* **Styling:** Tailwind CSS v4.2 (Utility-first)
+* **State Management:** Legacy Redux & Redux Thunk
+* **Routing:** React Router v7
+* **Utilities:** Axios, React Toastify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🏗 Key Features (Planned)
+* Responsive Design for all devices
+* State-managed Product Catalog
+* Advanced Shopping Cart functionality
+* Seamless Navigation with React Router
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+*Developed as part of a technical frontend portfolio.*
