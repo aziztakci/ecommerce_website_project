@@ -3,7 +3,7 @@ const homeData = {
         header: {
             logo: "Bandage",
             menu: ["Home", "Shop", "About", "Blog", "Contact", "Pages"],
-            auth: ["Login / Register"]
+            auth: ["Login","Register"]
         },
 
         carousel: {
@@ -270,7 +270,7 @@ const homeData = {
         header: {
             logo: "Bandage",
             menu: ["Ana Sayfa", "Mağaza", "Hakkında", "Blog", "İletişim", "Sayfalar"],
-            auth: ["Giriş / Kayıt Ol"]
+            auth: ["Giriş","Kayıt Ol"]
         },
 
         carousel: {
