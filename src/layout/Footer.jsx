@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <footer className="w-full bg-dark-background pt-10">
-      <div className="max-w-[1440px] mx-auto pl-[82.5px] pr-[82.5px] lg:pl-[196px] lg:pr-[220px]">
+      <div className="max-w-360 mx-auto pl-[82.5px] pr-[82.5px] lg:pl-49 lg:pr-55">
         <div className="flex flex-col lg:flex lg:flex-row justify-between  items-center gap-10">
           <div>
             <h3 className="self-start  xl:self-auto pt-10 lg:pt-0 text-light-text  xl:px-0 text-[24px] font-montserrat font-bold">
@@ -20,14 +20,14 @@ function Footer() {
               {footerContent.subtitle}
             </p>
           </div>
-          <button className="self-start xl:ml-0 xl:self-auto mt-[50px] mb-[90px] lg:my-0 text-light-text  text-[14px] font-montserrat font-bold cursor-pointer hover:bg-hover  bg-primary px-10 py-3.75 rounded-[5px]">
+          <button className="self-start xl:ml-0 xl:self-auto mt-12.5 mb-22.5 lg:my-0 text-light-text  text-[14px] font-montserrat font-bold cursor-pointer hover:bg-hover  bg-primary px-10 py-3.75 rounded-[5px]">
             {footerContent.button}
           </button>
         </div>
 
         <div className=" flex flex-col md:flex md:flex-row md:flex-wrap  xl:flex xl:flex-row  mt-10 gap-7.5 md:gap-15">
           {footerContent.sections.map((e) => (
-            <div key={e.id} className="flex flex-col min-w-[120px] gap-2.5">
+            <div key={e.id} className="flex flex-col min-w-30 gap-2.5">
               <h5 className="text-light-text text-[16px] font-bold font-montserrat mb-2.5">
                 {e.title}
               </h5>
@@ -44,7 +44,7 @@ function Footer() {
             </div>
           ))}
 
-          <div className="flex flex-col  gap-2.5 min-w-[120px]  mb-12.25">
+          <div className="flex flex-col  gap-2.5 min-w-30  mb-12.25">
             <h5 className="text-light-text text-[16px] font-bold font-montserrat mb-2.5">
               {footerContent.getIn.title}
             </h5>

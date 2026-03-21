@@ -17,7 +17,7 @@ function Header() {
   const headerContent = allData[lang].header;
 
   return (
-    <header className="w-full max-w-[1440px] mx-auto flex flex-wrap justify-between items-center px-[35px] pt-[36px] md:pl-[196px] md:pr-[220px] md:pt-0 md:my-7.5">
+    <header className="w-full max-w-360 mx-auto flex flex-wrap justify-between items-center px-8.75 pt-9 md:pl-49 md:pr-55 md:pt-0 md:my-7.5">
       <h1 className="font-montserrat  font-bold text-[24px]">
         {headerContent.logo}
       </h1>
@@ -54,13 +54,11 @@ function Header() {
               <li key={i}>
                 <NavLink
                   to={path}
-                  className={({isActive})=>{
+                  className={({ isActive }) => {
                     return isActive
-                    ? "text-second-text text-[30px] font-montserrat font-bold"
-                    : "text-second-text text-[30px] font-montserrat font-normal"
-                  }
-                    
-                  }
+                      ? "text-second-text text-[30px] font-montserrat font-bold"
+                      : "text-second-text text-[30px] font-montserrat font-normal";
+                  }}
                 >
                   {e}
                 </NavLink>
