@@ -1,9 +1,15 @@
+import face from "../assets/contact/facebook.svg";
+import insta from "../assets/contact/instagram.svg";
+import x from "../assets/contact/twitter.svg";
+
+
+
 const homeData = {
     en: {
         header: {
             logo: "Bandage",
             menu: ["Home", "Shop", "About", "Blog", "Contact", "Pages"],
-            auth: ["Login","Register"]
+            auth: ["Login", "Register"]
         },
 
         carousel: {
@@ -232,6 +238,7 @@ const homeData = {
 
         footer: {
             title: "Consulting Agency For Your Business",
+            subtitle: "the quick fox jumps over the lazy dog",
             button: "Contact Us",
             sections: [
                 {
@@ -253,16 +260,23 @@ const homeData = {
                     id: "footer-resources",
                     title: "Resources",
                     links: ["IOS & Android", "Watch a Demo", "Customers", "API"]
-                },
-                {
-                    id: "footer-contact",// TODO
-                    title: "Get In Touch",
-                    isContact: true,
-                    phone: "(480) 555-0103",
-                    address: "4517 Washington Ave.",
-                    email: "debra.holt@example.com"
                 }
+
+            ],
+            getIn: {
+                id: "footer-contact",
+                title: "Get In Touch",
+                phone: "(480) 555-0103",
+                address: "4517 Washington Ave.",
+                email: "debra.holt@example.com"
+            },
+            copyright: "Made With Love By Finland All Right Reserved ",
+            images: [
+                {id:"footer-image-fb", img:face ,text:"facebook"},
+                {id:"footer-image-inst", img:insta ,text:"instagram"},
+                {id:"footer-image-x", img:x ,text:"x-twitter"},
             ]
+
         },
     },
 
@@ -270,7 +284,7 @@ const homeData = {
         header: {
             logo: "Bandage",
             menu: ["Ana Sayfa", "Mağaza", "Hakkında", "Blog", "İletişim", "Sayfalar"],
-            auth: ["Giriş","Kayıt Ol"]
+            auth: ["Giriş", "Kayıt Ol"]
         },
 
         carousel: {
@@ -499,6 +513,7 @@ const homeData = {
 
         footer: {
             title: "İşletmeniz İçin Danışmanlık Ajansı",
+            subtitle: "atik tilki tembel köpeğin üzerinden atlar",
             button: "İletişime Geç",
             sections: [
                 {
@@ -521,14 +536,20 @@ const homeData = {
                     title: "Kaynaklar",
                     links: ["IOS & Android", "Demo İzle", "Müşteriler", "API"]
                 },
-                {
-                    id: "footer-tr-contact",
-                    title: "Bize Ulaşın",
-                    isContact: true,
-                    phone: "(480) 555-0103",
-                    address: "4517 Washington Ave.",
-                    email: "debra.holt@example.com"
-                }
+
+            ],
+            getIn: {
+                id: "footer-tr-contact",
+                title: "Bize Ulaşın",
+                phone: "(480) 555-0103",
+                address: "4517 Washington Ave.",
+                email: "debra.holt@example.com"
+            },
+            copyright: "Finlandiya Tarafından Yapıldı Bütün Hakları Saklıdır",
+            images: [
+                {id:"footer-image-fb", img:face ,text:"facebook"},
+                {id:"footer-image-inst", img:insta ,text:"instagram"},
+                {id:"footer-image-x", img:x ,text:"x-twitter"},
             ]
         }
     }

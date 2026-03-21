@@ -1,4 +1,4 @@
-import { Camera } from "lucide-react";
+
 import React from "react";
 import GlobalContextProvider from "./contexts/globalContext";
 import Layout from "./layout/Layout";
@@ -10,7 +10,11 @@ export default function App() {
     <GlobalContextProvider>
       <Layout>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={
+            <div className="w-max-[1077px]"> {/* TODO / homepage e geçtiğiğnde düzenle */}
+            <HomePage />
+            </div>
+            } />
         </Routes>
       </Layout>
     </GlobalContextProvider>

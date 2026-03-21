@@ -1,5 +1,6 @@
 import { legacy_createStore as createStore, applyMiddleware, combineReducers } from 'redux';
 import { thunk } from 'redux-thunk';
+import { globalReducer } from '../reducers/globalReducer';
 
 
 const rootReducer = combineReducers({
@@ -10,5 +11,5 @@ const rootReducer = combineReducers({
 export const store = createStore(rootReducer, applyMiddleware(thunk));
 
 
-import homeData from "../mockdatas/homeData";
-import { globalReducer } from '../reducers/globalReducer';
+
+
