@@ -1,7 +1,14 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../contexts/globalContext";
 import { useSelector } from "react-redux";
-import { ChevronDown, UserRound, Search, ShoppingCart, Heart   } from "lucide-react";
+import {
+  ChevronDown,
+  UserRound,
+  Search,
+  ShoppingCart,
+  Heart,
+  Menu,
+} from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 function Header() {
@@ -10,10 +17,12 @@ function Header() {
   const headerContent = allData[lang].header;
 
   return (
-    <header className="flex justify-between items-center my-7.5 mx-49">
-      <h1 className="font-montserrat font-bold text-[24px]">{headerContent.logo}</h1>
-      <nav>
-        <ul className="flex gap-3.75 list-none ">
+    <header className="w-full max-w-[1440px] mx-auto flex flex-wrap justify-between items-center px-[35px] pt-[36px] md:pl-[196px] md:pr-[220px] md:pt-0 md:my-7.5">
+      <h1 className="font-montserrat  font-bold text-[24px]">
+        {headerContent.logo}
+      </h1>
+      <nav className="order-3 xl:order-2  w-full xl:w-auto">
+        <ul className="hidden md:flex gap-3.75 pt-10 xl:pt-0 list-none">
           {headerContent.menu.map((e, i) => {
             const isShop = e === "Shop";
             const path = e === "Home" ? "/" : `/${e.toLowerCase()}`;
@@ -37,8 +46,30 @@ function Header() {
             );
           })}
         </ul>
+
+        <ul className="flex flex-col md:hidden items-center gap-7.5 py-20.75 ">
+          {headerContent.menuResp.map((e, i) => {
+            const path = e === "Home" ? "/" : `/${e.toLowerCase()}`;
+            return (
+              <li key={i}>
+                <NavLink
+                  to={path}
+                  className={({isActive})=>{
+                    return isActive
+                    ? "text-second-text text-[30px] font-montserrat font-bold"
+                    : "text-second-text text-[30px] font-montserrat font-normal"
+                  }
+                    
+                  }
+                >
+                  {e}
+                </NavLink>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
-      <div className="flex gap-1 text-primary text-[14px] font-montserrat font-bold">
+      <div className="hidden md:flex order-2 xl:order-3 pt-10 min-[842px]:pt-0 gap-1 text-primary text-[14px] font-montserrat font-bold">
         {headerContent.auth.map((e, i) => {
           const isLogin = e === "Login";
           const isLastItem = i === headerContent.auth.length - 1;
@@ -54,18 +85,32 @@ function Header() {
           );
         })}
 
-          {/* TODO */}
-          <div className="flex ml-7.5 gap-7.5 text-primary">
-            <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25"><Search size={19}/></span> 
-            <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25"><ShoppingCart size={19}/>1</span>
-            <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25"><Heart  size={19}/>1</span>
-          </div>
-
+        {/* TODO */}
+        <div className="flex ml-7.5 gap-7.5 text-primary">
+          <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25">
+            <Search size={19} />
+          </span>
+          <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25">
+            <ShoppingCart size={19} />1
+          </span>
+          <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25">
+            <Heart size={19} />1
+          </span>
+        </div>
       </div>
-      
+      <div className="flex gap-6.25 md:hidden">
+        <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25">
+          <Search size={25} />
+        </span>
+        <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25">
+          <ShoppingCart size={25} />
+        </span>
+        <span className="flex items-center text-[12px] font-montserrat font-medium gap-1.25">
+          <Menu size={25} />
+        </span>
+      </div>
     </header>
   );
 }
 
 export default Header;
-

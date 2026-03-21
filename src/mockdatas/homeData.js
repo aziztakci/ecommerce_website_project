@@ -9,6 +9,7 @@ const homeData = {
         header: {
             logo: "Bandage",
             menu: ["Home", "Shop", "About", "Blog", "Contact", "Pages"],
+            menuResp: ["Home", "Product", "Pricing", "Contact" ],
             auth: ["Login", "Register"]
         },
 
@@ -284,6 +285,7 @@ const homeData = {
         header: {
             logo: "Bandage",
             menu: ["Ana Sayfa", "Mağaza", "Hakkında", "Blog", "İletişim", "Sayfalar"],
+            menuResp: ["Ana Sayfa", "Ürünler", "Fiyatlandırma", "İletişim" ],
             auth: ["Giriş", "Kayıt Ol"]
         },
 
