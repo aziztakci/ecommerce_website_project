@@ -4,9 +4,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import { useSelector } from "react-redux";
 import { GlobalContext } from "../contexts/globalContext";
 
-import groceryImg from "../assets/images/groceriesCarousel.svg";
-import groceryImg3 from "../assets/images/groceriesCarousel3.png";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,7 +14,7 @@ function SliderCaroussel() {
   const carouselContent = allData[lang].carousel;
 
   return (
-    <div className="w-full h-159.5 md:h-screen overflow-hidden">
+    <div className="w-full h-159.5 md:h-[89.5vh] overflow-hidden">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={0}

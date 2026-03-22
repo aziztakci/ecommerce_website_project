@@ -68,3 +68,23 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Swipper Pagination Css Changes */
+.swiper-pagination-bullet {
+  width: 63px !important;
+  height: 6px !important;
+  border-radius: 0px !important;
+  background-color: var(--color-light-background) !important; 
+  opacity: 0.5 !important;
+  margin: 0 1px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-light-background) !important; 
+  opacity: 1 !important;
+}
+
+.swiper-pagination {
+  bottom: 25px !important;
+}
