@@ -1,6 +1,8 @@
 import face from "../assets/contact/facebook.svg";
 import insta from "../assets/contact/instagram.svg";
 import x from "../assets/contact/twitter.svg";
+import groceryImg from "../assets/images/groceriesCarousel.svg";
+import groceryImg3 from "../assets/images/groceriesCarousel3.png";
 
 
 
@@ -9,7 +11,7 @@ const homeData = {
         header: {
             logo: "Bandage",
             menu: ["Home", "Shop", "About", "Blog", "Contact", "Pages"],
-            menuResp: ["Home", "Product", "Pricing", "Contact" ],
+            menuResp: ["Home", "Product", "Pricing", "Contact"],
             auth: ["Login", "Register"]
         },
 
@@ -21,7 +23,8 @@ const homeData = {
                     subtitle:
                         "We know how large objects will act, but things on a small scale just do not act that way.",
                     button: "Start Now",
-                    image: "img_1", // TODO
+                    image: groceryImg,
+                    alt: "grocery_image",
                 },
                 {
                     id: "carousel-slide-grocery-2",
@@ -29,7 +32,8 @@ const homeData = {
                     subtitle:
                         "We know how large objects will act, but things on a small scale just do not act that way.",
                     button: "Start Now",
-                    image: "img_2", // TODO
+                    image: groceryImg3,
+                    alt: "grocery_image",
                 }
             ]
         },
@@ -273,9 +277,9 @@ const homeData = {
             },
             copyright: "Made With Love By Finland All Right Reserved ",
             images: [
-                {id:"footer-image-fb", img:face ,text:"facebook"},
-                {id:"footer-image-inst", img:insta ,text:"instagram"},
-                {id:"footer-image-x", img:x ,text:"x-twitter"},
+                { id: "footer-image-fb", img: face, text: "facebook" },
+                { id: "footer-image-inst", img: insta, text: "instagram" },
+                { id: "footer-image-x", img: x, text: "x-twitter" },
             ]
 
         },
@@ -285,7 +289,7 @@ const homeData = {
         header: {
             logo: "Bandage",
             menu: ["Ana Sayfa", "Mağaza", "Hakkında", "Blog", "İletişim", "Sayfalar"],
-            menuResp: ["Ana Sayfa", "Ürünler", "Fiyatlandırma", "İletişim" ],
+            menuResp: ["Ana Sayfa", "Ürünler", "Fiyatlandırma", "İletişim"],
             auth: ["Giriş", "Kayıt Ol"]
         },
 
@@ -297,7 +301,8 @@ const homeData = {
                     subtitle:
                         "Büyük nesnelerin nasıl davranacağını biliyoruz, ancak küçük ölçekte işler bu şekilde işlemez.",
                     button: "Başla",
-                    image: "img_1", // TODO
+                    image: groceryImg,
+                    alt: "grocery_image",
                 },
                 {
                     id: "carousel-slide-market-2",
@@ -305,7 +310,8 @@ const homeData = {
                     subtitle:
                         "Büyük nesnelerin nasıl davranacağını biliyoruz, ancak küçük ölçekte işler bu şekilde işlemez.",
                     button: "Başla",
-                    image: "img_2", // TODO
+                    image: groceryImg3,
+                    alt: "grocery_image",
                 }
             ]
         },
@@ -549,9 +555,9 @@ const homeData = {
             },
             copyright: "Finlandiya Tarafından Yapıldı Bütün Hakları Saklıdır",
             images: [
-                {id:"footer-image-fb", img:face ,text:"facebook"},
-                {id:"footer-image-inst", img:insta ,text:"instagram"},
-                {id:"footer-image-x", img:x ,text:"x-twitter"},
+                { id: "footer-image-fb", img: face, text: "facebook" },
+                { id: "footer-image-inst", img: insta, text: "instagram" },
+                { id: "footer-image-x", img: x, text: "x-twitter" },
             ]
         }
     }
