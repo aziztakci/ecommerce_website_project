@@ -3,7 +3,7 @@ import React from "react";
 import GlobalContextProvider from "./contexts/globalContext";
 import Layout from "./layout/Layout";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./components/HomePage";
+import HomePage from "./pages/HomePage";
 
 export default function App() {
   return (
