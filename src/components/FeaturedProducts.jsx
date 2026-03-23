@@ -8,7 +8,7 @@ function FeaturedProducts({ data, reverse }) {
 
 
   return (
-    <section className={`flex flex-col px-10 md:flex-row ${reverse ? 'md:flex-row-reverse' : ''} justify-center pt-12 md:pt-0 items-center md:items-start md:gap-7.5 pb-28 md:pb-12.5`}>
+    <section className={`flex flex-col px-10 md:flex-row bg-light-background ${reverse ? 'md:flex-row-reverse' : ''} justify-center pt-12 md:pt-0 items-center md:items-start md:gap-7.5 pb-28 md:pb-12.5`}>
       <div className="relative w-97.25 h-166 md:h-199 border border-disabled-element shrink-0">
         <img className="absolute top-0 left-0 object-cover w-full h-full " src={data.image} alt={data.imageTitle} />
         <h6 className="absolute top-0 left-0 pl-6 md:pl-12 pt-6 text-text text-[14px] font-montserrat font-bold ">{data.imageTitle}</h6>
