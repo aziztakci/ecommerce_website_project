@@ -6,6 +6,11 @@ import groceryImg3 from "../assets/images/groceriesCarousel3.png";
 import caramelCone from "../assets/images/caramelCone.svg";
 import apple from "../assets/images/apple.svg";
 import rosebeef from "../assets/images/rosebeef.svg";
+import caramelConeMini from "../assets/images/caramelConeMini.svg";
+import appleMini from "../assets/images/appleMini.svg";
+import rosebeefMini from "../assets/images/rosebeefMini.svg";
+import cardYellow from "../assets/images/cardYellow.svg";
+import cardBlue from "../assets/images/cardBlue.svg";
 
 
 const homeData = {
@@ -72,7 +77,7 @@ const homeData = {
         featuredProducts1: {
             title: "BESTSELLER PRODUCTS",
             tabs: ["Men", "Women", "Accessories"],
-            image: "img_111", // TODO
+            image: cardYellow,
             imageTitle: "FURNITURE",
             imageText: "5 Items",
             products: [
@@ -82,7 +87,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_6", // TODO
+                    image: caramelConeMini, 
                 },
                 {
                     id: "featured-1-prod-2",
@@ -90,7 +95,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_7" // TODO
+                    image: appleMini,
                 },
                 {
                     id: "featured-1-prod-3",
@@ -98,7 +103,31 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_8" // TODO
+                    image: rosebeefMini,
+                },
+                {
+                    id: "featured-1-prod-4",
+                    name: "Graphic Design",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: caramelConeMini,
+                },
+                {
+                    id: "featured-1-prod-5",
+                    name: "Graphic Design",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: appleMini,
+                },
+                {
+                    id: "featured-1-prod-6",
+                    name: "Graphic Design",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: rosebeefMini,
                 }
             ]
         },
@@ -121,7 +150,7 @@ const homeData = {
         featuredProducts2: {
             title: "BESTSELLER PRODUCTS",
             tabs: ["Men", "Women", "Accessories"],
-            image: "img_111", // TODO
+            image: cardBlue,
             imageTitle: "FURNITURE",
             imageText: "5 Items",
             products: [
@@ -131,7 +160,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_6", // TODO
+                    image: caramelConeMini,
                 },
                 {
                     id: "featured-2-prod-2",
@@ -139,7 +168,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_7" // TODO
+                    image: appleMini,
                 },
                 {
                     id: "featured-2-prod-3",
@@ -147,7 +176,31 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_8" // TODO
+                    image: rosebeefMini,
+                },
+                {
+                    id: "featured-1-prod-4",
+                    name: "Graphic Design",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: caramelConeMini,
+                },
+                {
+                    id: "featured-1-prod-5",
+                    name: "Graphic Design",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: appleMini,
+                },
+                {
+                    id: "featured-1-prod-6",
+                    name: "Graphic Design",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: rosebeefMini,
                 }
             ]
         },
@@ -356,7 +409,7 @@ const homeData = {
         featuredProducts1: {
             title: "EN ÇOK SATAN ÜRÜNLER",
             tabs: ["Erkek", "Kadın", "Aksesuar"],
-            image: "img_111", // TODO
+            image: cardBlue, 
             imageTitle: "MOBİLYA",
             imageText: "5 Ürün",
             products: [
@@ -366,7 +419,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_6", // TODO
+                    image: caramelConeMini,
                 },
                 {
                     id: "featured-1-tr-prod-2",
@@ -374,7 +427,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_7" // TODO
+                    image: appleMini,
                 },
                 {
                     id: "featured-1-tr-prod-3",
@@ -382,7 +435,31 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_8" // TODO
+                    image: rosebeefMini,
+                },
+                {
+                    id: "featured-1-tr-prod-4",
+                    name: "Grafik Tasarım",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: caramelConeMini,
+                },
+                {
+                    id: "featured-1-tr-prod-5",
+                    name: "Grafik Tasarım",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: appleMini,
+                },
+                {
+                    id: "featured-1-tr-prod-6",
+                    name: "Grafik Tasarım",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: rosebeefMini,
                 }
             ]
         },
@@ -405,7 +482,7 @@ const homeData = {
         featuredProducts2: {
             title: "EN ÇOK SATAN ÜRÜNLER",
             tabs: ["Erkek", "Kadın", "Aksesuar"],
-            image: "img_111", // TODO
+            image: cardBlue,
             imageTitle: "MOBİLYA",
             imageText: "5 Ürün",
             products: [
@@ -415,7 +492,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_6", // TODO
+                    image: caramelConeMini,
                 },
                 {
                     id: "featured-2-tr-prod-2",
@@ -423,7 +500,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_7" // TODO
+                    image: appleMini,
                 },
                 {
                     id: "featured-2-tr-prod-3",
@@ -431,7 +508,31 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_8" // TODO
+                    image: rosebeefMini,
+                },
+                {
+                    id: "featured-1-tr-prod-4",
+                    name: "Grafik Tasarım",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: caramelConeMini,
+                },
+                {
+                    id: "featured-1-tr-prod-5",
+                    name: "Grafik Tasarım",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: appleMini,
+                },
+                {
+                    id: "featured-1-tr-prod-6",
+                    name: "Grafik Tasarım",
+                    department: "English Department",
+                    priceOld: "$16.48",
+                    priceNew: "$6.48",
+                    image: rosebeefMini,
                 }
             ]
         },

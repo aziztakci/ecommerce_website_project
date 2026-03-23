@@ -32,10 +32,10 @@ function Header() {
                 <NavLink
                   to={path}
                   className={({ isActive }) =>
-                    `flex items-center ${
+                    `flex items-center  text-[14px] font-montserrat ${
                       isActive
-                        ? "text-text text-[14px] font-montserrat font-medium"
-                        : "text-second-text text-[14px] font-montserrat font-bold"
+                        ? "text-text font-medium"
+                        : "text-second-text font-bold"
                     }`
                   }
                 >

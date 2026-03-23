@@ -8,12 +8,12 @@ function Highlights() {
   const highlightContent = allData[lang].highlightSection;
 
   return (
-  <section className="flex flex-col items-center my-20 mx-10 md:flex-row md:flex-wrap lg:flex-nowrap justify-center gap-2.5 md:gap-10.75">
+  <section className="flex flex-col items-center my-20 mx-10 md:flex-row md:flex-wrap lg:flex-nowrap justify-center gap-2.5 md:gap-10.75 ">
     {highlightContent.items.map((e)=>(
-        <div key={e.id} className="w-83.25 h-58 relative overflow-hidden">
+        <div key={e.id} className="w-83.25 h-58 relative overflow-hidden ">
             <img  src={e.image} alt={e.alt} className="absolute left-0 top-0 h-full min-w-106.25 max-w-none object-cover object-left" />
             <p className="absolute left-0 top-0 pl-10 pt-11.5 font-montserrat font-bold text-second-text text-[14px]" >{e.overline}</p>
-            <h3 className="absolute left-0 top-0 pl-10 pt-[86px] font-montserrat text-text text-[24px] font-bold max-w-[115px] ">{e.title}</h3>
+            <h3 className="absolute left-0 top-0 pl-10 pt-21.5 font-montserrat text-text text-[24px] font-bold max-w-28.75 ">{e.title}</h3>
             <p className="absolute left-0 top-0 pl-10 pt-42.25 font-normal font-montserrat text-text text-[12px] ">{e.subtitle}</p>
         </div>
     ))}
