@@ -3,7 +3,9 @@ import insta from "../assets/contact/instagram.svg";
 import x from "../assets/contact/twitter.svg";
 import groceryImg from "../assets/images/groceriesCarousel.svg";
 import groceryImg3 from "../assets/images/groceriesCarousel3.png";
-
+import caramelCone from "../assets/images/caramelCone.svg";
+import apple from "../assets/images/apple.svg";
+import rosebeef from "../assets/images/rosebeef.svg";
 
 
 const homeData = {
@@ -42,21 +44,27 @@ const homeData = {
             items: [
                 {
                     id: "highlight-unique-life",
+                    overline: "Your Space",
                     title: "Unique Life",
                     subtitle: "Explore Items",
-                    image: "img_3", // TODO
+                    image: caramelCone, 
+                    alt: "caramel cone",
                 },
                 {
                     id: "highlight-elements-style-1",
+                    overline: "Ends Today",
                     title: "Elements Style",
                     subtitle: "Explore Items",
-                    image: "img_4", // TODO
+                    image: apple, 
+                    alt: "apple",
                 },
                 {
                     id: "highlight-elements-style-2",
+                    overline: "Ends Today",
                     title: "Elements Style",
                     subtitle: "Explore Items",
-                    image: "img_5", // TODO
+                    image: rosebeef, 
+                    alt: "rose beef",
                 }
             ]
         },
@@ -320,21 +328,27 @@ const homeData = {
             items: [
                 {
                     id: "highlight-tr-unique-life",
+                    overline: "Senin Alanın",
                     title: "Benzersiz Yaşam",
                     subtitle: "Ürünleri Keşfet",
-                    image: "img_3", // TODO
+                    image: caramelCone,
+                    alt: "caramel cone"
                 },
                 {
                     id: "highlight-tr-style-1",
+                    overline: "Son Gün Fırsatı",
                     title: "Stil Öğeleri",
                     subtitle: "Ürünleri Keşfet",
-                    image: "img_4", // TODO
+                    image: apple,
+                    alt: "apple"
                 },
                 {
                     id: "highlight-tr-style-2",
+                    overline: "Son Gün Fırsatı",
                     title: "Stil Öğeleri",
                     subtitle: "Ürünleri Keşfet",
-                    image: "img_5", // TODO
+                    image: rosebeef,
+                    alt: "rese beef"
                 }
             ]
         },

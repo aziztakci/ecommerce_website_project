@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../contexts/globalContext";
 import { useSelector } from "react-redux";
 import SliderCaroussel from "../components/SliderCaroussel";
+import Highlights from "../components/highlights";
 
 function HomePage() {
   const { lang } = useContext(GlobalContext);
@@ -11,6 +12,7 @@ function HomePage() {
   return (
     <div>
       <SliderCaroussel />
+      <Highlights />
     </div>
   );
 }

@@ -17,7 +17,7 @@ function Header() {
   const headerContent = allData[lang].header;
 
   return (
-    <header className="w-full max-w-360 mx-auto flex flex-wrap justify-between items-center px-8.75 pt-9 md:pl-49 md:pr-55 md:pt-0 md:my-7.5">
+    <header className="w-full  max-w-360 mx-auto flex flex-wrap justify-between items-center px-8.75 pt-9 md:pl-49 md:pr-55 md:pt-0 md:my-7.5">
       <h1 className="font-montserrat  font-bold text-[24px]">
         {headerContent.logo}
       </h1>
