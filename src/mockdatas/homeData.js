@@ -19,6 +19,12 @@ import cheese from "../assets/images/cheese.svg";
 import whaleBin from "../assets/images/whaleBin.svg";
 import candy from "../assets/images/candy.svg";
 import bleach from "../assets/images/bleach.svg";
+import hooli from "../assets/brands/hooli.svg";
+import lyft from "../assets/brands/lyft.svg";
+import stripe from "../assets/brands/stripe.svg";
+import hood from "../assets/brands/hood.svg";
+import aws from "../assets/brands/aws.svg";
+import droid from "../assets/brands/droid.svg";
 
 
 const homeData = {
@@ -296,12 +302,12 @@ const homeData = {
         },
 
         brandLogos: [
-            { id: "brand-logo-1", image: "img_17" },// TODO
-            { id: "brand-logo-2", image: "img_18" },// TODO
-            { id: "brand-logo-3", image: "img_19" },// TODO
-            { id: "brand-logo-4", image: "img_20" },// TODO
-            { id: "brand-logo-5", image: "img_21" },// TODO
-            { id: "brand-logo-6", image: "img_22" } // TODO
+            { id: "brand-logo-1", image: hooli, name:"hooli"},
+            { id: "brand-logo-2", image: lyft, name:"lyft"},
+            { id: "brand-logo-3", image: hood, name:"hood"},
+            { id: "brand-logo-4", image: stripe, name:"stripe"},
+            { id: "brand-logo-5", image: aws, name:"aws"},
+            { id: "brand-logo-6", image: droid, name:"droid" } 
         ],
 
         featuredPosts: {
@@ -656,14 +662,14 @@ const homeData = {
         },
 
         brandLogos: [
-            { id: "brand-tr-logo-1", image: "img_17" },// TODO
-            { id: "brand-tr-logo-2", image: "img_18" },// TODO
-            { id: "brand-tr-logo-3", image: "img_19" },// TODO
-            { id: "brand-tr-logo-4", image: "img_20" },// TODO
-            { id: "brand-tr-logo-5", image: "img_21" },// TODO
-            { id: "brand-tr-logo-6", image: "img_22" } // TODO
+            { id: "brand-tr-logo-1", image: hooli, name: "hooli" },
+            { id: "brand-tr-logo-2", image: lyft, name: "lyft"},
+            { id: "brand-tr-logo-3", image: hood, name: "hood" },
+            { id: "brand-tr-logo-4", image: stripe, name: "stripe" },
+            { id: "brand-tr-logo-5", image: aws, name: "aws" },
+            { id: "brand-tr-logo-6", image: droid, name: "droid" } 
         ],
-
+        
         featuredPosts: {
             title: "Öne Çıkan Yazılar",
             subtitle: "Pratik Tavsiyeler",

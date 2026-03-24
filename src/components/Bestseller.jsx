@@ -8,7 +8,7 @@ function Bestseller() {
   const bestsellerContent = allData[lang].bestsellerProducts;
 
   return (
-    <section className=" bg-light-gray-1 py-12 px-10 w-full leading-none">
+    <section className=" bg-light-gray-1 py-12 px-10 w-full leading-none ">
       <div className="flex flex-col max-w-262.5 mx-auto">
         <h3 className="font-montserrat font-bold text-text text-[24px]  pb-6">{bestsellerContent.title}</h3>
         <div className="border border-light-gray-2 w-full mb-6 md:mb-4.5"></div>{/* /br */}
@@ -25,7 +25,7 @@ function Bestseller() {
                 >
                   {e.department}
                 </a>
-                <div className="flex  gap-1.25 pt-6">
+                <div className="flex  gap-1.25 pt-6 pb-0 md:pb-10">
                   <h5 className="font-montserrat font-bold text-muted text-[16px] py-1.25">
                     {e.priceOld}
                   </h5>

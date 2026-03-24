@@ -7,6 +7,7 @@ import FeaturedProducts from "../components/FeaturedProducts";
 import MostPopular from "../components/MostPopular.jsx";
 import InfoStrip from "../components/InfoStrip.jsx";
 import Bestseller from "../components/Bestseller.jsx";
+import BrandLogos from "../components/BrandLogos.jsx";
 
 function HomePage() {
   const { lang } = useContext(GlobalContext);
@@ -26,6 +27,7 @@ function HomePage() {
       <FeaturedProducts data={featuredData2} reverse={true} />
       <MostPopular data={popularData2} reverse={true} showView={true} />
       <Bestseller />
+      <BrandLogos />
     </div>
   );
 }
