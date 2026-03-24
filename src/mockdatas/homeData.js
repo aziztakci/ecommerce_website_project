@@ -226,6 +226,33 @@ const homeData = {
             }
         },
 
+        infoStrip : [
+            {
+                id:"infostr-1",
+                number: "1.",
+                title: "Easy to use",
+                description: "Things on a very small that you have any direct",
+            },
+            {
+                id:"infostr-2",
+                number: "2.",
+                title: "Easy to use",
+                description: "Things on a very small that you have any direct",
+            },
+            {
+                id:"infostr-3",
+                number: "3.",
+                title: "Easy to use",
+                description: "Things on a very small that you have any direct",
+            },
+            {
+                id:"infostr-4",
+                number: "4.",
+                title: "Easy to use",
+                description: "Things on a very small that you have any direct",
+            },
+        ],
+
         bestsellerProducts: {
             title: "BESTSELLER PRODUCTS",
             products: [
@@ -558,6 +585,33 @@ const homeData = {
                 image: cashew,
             }
         },
+
+        infoStrip : [
+            {
+                id:"infostr-tr-1",
+                number: "1.",
+                title: "Kolay kullanım",
+                description: "Doğrudan erişebileceğiniz küçük ölçekli şeyler",
+            },
+            {
+                id:"infostr-tr-2",
+                number: "2.",
+                title: "Kolay kullanım",
+                description: "Doğrudan erişebileceğiniz küçük ölçekli şeyler",
+            },
+            {
+                id:"infostr-tr-3",
+                number: "3.",
+                title: "Kolay kullanım",
+                description: "Doğrudan erişebileceğiniz küçük ölçekli şeyler",
+            },
+            {
+                id:"infostr-tr-4",
+                number: "4.",
+                title: "Kolay kullanım",
+                description: "Doğrudan erişebileceğiniz küçük ölçekli şeyler",
+            },
+        ],
 
         bestsellerProducts: {
             title: "EN ÇOK SATAN ÜRÜNLER",

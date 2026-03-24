@@ -5,6 +5,7 @@ import SliderCaroussel from "../components/SliderCaroussel";
 import Highlights from "../components/Highlights.jsx";
 import FeaturedProducts from "../components/FeaturedProducts";
 import MostPopular from "../components/MostPopular.jsx";
+import InfoStrip from "../components/InfoStrip.jsx";
 
 function HomePage() {
   const { lang } = useContext(GlobalContext);
@@ -20,6 +21,7 @@ function HomePage() {
       <Highlights />
       <FeaturedProducts data={featuredData1} reverse={false} />
       <MostPopular data={popularData1} reverse={false} showView={false} />
+      <InfoStrip />
       <FeaturedProducts data={featuredData2} reverse={true} />
       <MostPopular data={popularData2} reverse={true} showView={true} />
     </div>
