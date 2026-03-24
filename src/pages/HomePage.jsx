@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../contexts/GlobalContext";
 import { useSelector } from "react-redux";
 import SliderCaroussel from "../components/SliderCaroussel";
-import Highlights from "../components/highlights";
+import Highlights from "../components/Highlights.jsx";
 import FeaturedProducts from "../components/FeaturedProducts";
 
 function HomePage() {
