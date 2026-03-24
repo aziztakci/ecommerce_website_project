@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../contexts/globalContext";
+import { GlobalContext } from "../contexts/GlobalContext";
 import { useSelector } from "react-redux";
 import {
   ChevronDown,

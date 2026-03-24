@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useSelector } from "react-redux";
-import { GlobalContext } from "../contexts/globalContext";
+import { GlobalContext } from "../contexts/GlobalContext";
 
 import "swiper/css";
 import "swiper/css/navigation";
