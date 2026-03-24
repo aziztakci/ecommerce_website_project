@@ -15,6 +15,10 @@ import meat from "../assets/images/meat.svg";
 import vespa from "../assets/images/vespa.svg";
 import cashew from "../assets/images/cashew.svg";
 import eating from "../assets/images/eating.svg";
+import cheese from "../assets/images/cheese.svg";
+import whaleBin from "../assets/images/whaleBin.svg";
+import candy from "../assets/images/candy.svg";
+import bleach from "../assets/images/bleach.svg";
 
 
 const homeData = {
@@ -262,7 +266,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_13" // TODO
+                    image: whaleBin,
                 },
                 {
                     id: "best-prod-14",
@@ -270,7 +274,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_14" // TODO
+                    image: cheese,
                 },
                 {
                     id: "best-prod-15",
@@ -278,7 +282,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_15" // TODO
+                    image: bleach,
                 },
                 {
                     id: "best-prod-16",
@@ -286,7 +290,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_16" // TODO
+                    image: candy,
                 }
             ]
         },
@@ -622,7 +626,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_13" // TODO
+                    image: whaleBin,
                 },
                 {
                     id: "best-tr-prod-14",
@@ -630,7 +634,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_14" // TODO
+                    image: cheese,
                 },
                 {
                     id: "best-tr-prod-15",
@@ -638,7 +642,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_15" // TODO
+                    image: bleach,
                 },
                 {
                     id: "best-tr-prod-16",
@@ -646,7 +650,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: "img_16" // TODO
+                    image: candy,
                 }
             ]
         },
