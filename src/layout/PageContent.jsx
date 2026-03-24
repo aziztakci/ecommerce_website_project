@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function PageContent({children}) {
+function PageContent({ children }) {
   return (
-    <main className="w-full"> {/* TODO flex-grow kontrol et/footer ve her hangi bir homepage componenti bittikten sonra.... */}
+    <main className="w-full">
       {children}
     </main>
-  )
+  );
 }
 
-export default PageContent
+export default PageContent;

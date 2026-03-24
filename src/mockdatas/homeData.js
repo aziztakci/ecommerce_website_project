@@ -11,6 +11,10 @@ import appleMini from "../assets/images/appleMini.svg";
 import rosebeefMini from "../assets/images/rosebeefMini.svg";
 import cardYellow from "../assets/images/cardYellow.svg";
 import cardBlue from "../assets/images/cardBlue.svg";
+import meat from "../assets/images/meat.svg";
+import vespa from "../assets/images/vespa.svg";
+import cashew from "../assets/images/cashew.svg";
+import eating from "../assets/images/eating.svg";
 
 
 const homeData = {
@@ -134,16 +138,17 @@ const homeData = {
 
         mostPopular1: {
             id: "section-most-popular-1",
-            image: "img_123", // TODO
+            image: vespa,
             title: "MOST POPULAR",
             description:
                 "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
             product: {
                 id: "pop-1-detail",
                 name: "English Department",
+                text: "15 Sales",
                 priceOld: "$16.48",
                 priceNew: "$6.48",
-                image: "img_9" // TODO
+                image: meat,
             }
         },
 
@@ -207,7 +212,7 @@ const homeData = {
 
         mostPopular2: {
             id: "section-most-popular-2",
-            image: "img_124", // TODO
+            image: eating,
             title: "MOST POPULAR",
             description:
                 "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
@@ -217,7 +222,7 @@ const homeData = {
                 text: "15 Sales",
                 priceOld: "$16.48",
                 priceNew: "$6.48",
-                image: "img_9" // TODO
+                image: cashew,
             }
         },
 
@@ -466,16 +471,17 @@ const homeData = {
 
         mostPopular1: {
             id: "section-tr-most-popular-1",
-            image: "img_123", // TODO
+            image: vespa,
             title: "EN POPÜLER",
             description:
                 "Ergonomiye ve çalıştığınız ortama odaklanıyoruz. Sadece bir tuş uzağınızda.",
             product: {
                 id: "pop-1-tr-detail",
                 name: "English Department",
+                text: "15 Satış",
                 priceOld: "$16.48",
                 priceNew: "$6.48",
-                image: "img_9" // TODO
+                image: meat,
             }
         },
 
@@ -539,7 +545,7 @@ const homeData = {
 
         mostPopular2: {
             id: "section-tr-most-popular-2",
-            image: "img_124", // TODO
+            image: eating,
             title: "EN POPÜLER",
             description:
                 "Ergonomiye ve çalıştığınız ortama odaklanıyoruz. Sadece bir tuş uzağınızda.",
@@ -549,7 +555,7 @@ const homeData = {
                 text: "15 Satış",
                 priceOld: "$16.48",
                 priceNew: "$6.48",
-                image: "img_9" // TODO
+                image: cashew,
             }
         },
 
