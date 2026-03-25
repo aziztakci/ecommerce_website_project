@@ -25,6 +25,13 @@ import stripe from "../assets/brands/stripe.svg";
 import hood from "../assets/brands/hood.svg";
 import aws from "../assets/brands/aws.svg";
 import droid from "../assets/brands/droid.svg";
+import road from "../assets/images/road.svg";
+import car from "../assets/images/car.svg";
+import umbrella from "../assets/images/umbrella.svg";
+import color from "../assets/images/color.svg";
+import plant from "../assets/images/plant.svg";
+import colorBrush from "../assets/images/colorBrush.svg";
+
 
 
 const homeData = {
@@ -321,7 +328,13 @@ const homeData = {
                     description:
                         "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
                     button: "Learn More",
-                    image: "img_10" // TODO
+                    date: "22 April 2021",
+                    commentCount: "10 comments",
+                    image: road,
+                    imageText: "NEW",
+                    alt: "road",
+                    mobileImage: color,
+                    
                 },
                 {
                     id: "post-madison-2",
@@ -330,7 +343,13 @@ const homeData = {
                     description:
                         "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
                     button: "Learn More",
-                    image: "img_11" // TODO
+                    date: "22 April 2021",
+                    commentCount: "10 comments",
+                    image: car,
+                    imageText: "NEW",
+                    alt: "car",
+                    mobileImage: plant,
+                    
                 },
                 {
                     id: "post-madison-3",
@@ -339,10 +358,17 @@ const homeData = {
                     description:
                         "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
                     button: "Learn More",
-                    image: "img_12" // TODO
+                    date: "22 April 2021",
+                    commentCount: "10 comments",
+                    image: umbrella,
+                    imageText: "NEW",
+                    alt: "umbrellas",
+                    mobileImage: colorBrush,
+                    
                 }
             ]
         },
+        
 
         footer: {
             title: "Consulting Agency For Your Business",
@@ -681,7 +707,13 @@ const homeData = {
                     description:
                         "Ergonomiye ve çalıştığınız ortama odaklanıyoruz. Sadece bir tuş uzağınızda.",
                     button: "Daha Fazla",
-                    image: "img_10" // TODO
+                    date: "22 April 2021",
+                    commentCount: "10 yorum",
+                    image: road,
+                    imageText: "YENİ",
+                    alt: "road",
+                    mobileImage: color,
+                    
                 },
                 {
                     id: "post-tr-madison-2",
@@ -690,7 +722,13 @@ const homeData = {
                     description:
                         "Ergonomiye ve çalıştığınız ortama odaklanıyoruz. Sadece bir tuş uzağınızda.",
                     button: "Daha Fazla",
-                    image: "img_11" // TODO
+                    date: "22 April 2021",
+                    commentCount: "10 yorum",
+                    image: car,
+                    imageText: "YENİ",
+                    alt: "car",
+                    mobileImage: plant,
+                    
                 },
                 {
                     id: "post-tr-madison-3",
@@ -699,7 +737,13 @@ const homeData = {
                     description:
                         "Ergonomiye ve çalıştığınız ortama odaklanıyoruz. Sadece bir tuş uzağınızda.",
                     button: "Daha Fazla",
-                    image: "img_12" // TODO
+                    date: "22 April 2021",
+                    commentCount: "10 yorum",
+                    image: umbrella,
+                    imageText: "YENİ",
+                    alt: "umbrellas",
+                    mobileImage: colorBrush,
+                    
                 }
             ]
         },

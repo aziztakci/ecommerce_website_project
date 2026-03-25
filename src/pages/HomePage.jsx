@@ -8,6 +8,7 @@ import MostPopular from "../components/MostPopular.jsx";
 import InfoStrip from "../components/InfoStrip.jsx";
 import Bestseller from "../components/Bestseller.jsx";
 import BrandLogos from "../components/BrandLogos.jsx";
+import FeaturedPosts from "../components/FeaturedPosts.jsx";
 
 function HomePage() {
   const { lang } = useContext(GlobalContext);
@@ -28,6 +29,7 @@ function HomePage() {
       <MostPopular data={popularData2} reverse={true} showView={true} />
       <Bestseller />
       <BrandLogos />
+      <FeaturedPosts />
     </div>
   );
 }
