@@ -3,6 +3,7 @@ import { useShopData } from '../hooks/useShopData';
 import InfoTop from '../components/InfoTop';
 import CategoriesShopPage from '../components/CategoriesShopPage';
 import Toolbar from '../components/Toolbar';
+import Products from '../components/Products';
 
 function ShopPage() {
   const { data, isLoading, error } = useShopData(); 
@@ -15,6 +16,7 @@ function ShopPage() {
       <InfoTop data={data}/>
       <CategoriesShopPage data={data}/>
       <Toolbar data={data}/>
+      <Products data={data} />
     </section>
   );
 }
