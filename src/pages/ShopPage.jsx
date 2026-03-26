@@ -4,6 +4,7 @@ import InfoTop from '../components/InfoTop';
 import CategoriesShopPage from '../components/CategoriesShopPage';
 import Toolbar from '../components/Toolbar';
 import Products from '../components/Products';
+import BrandLogos from '../components/BrandLogos';
 
 function ShopPage() {
   const { data, isLoading, error } = useShopData(); 
@@ -17,6 +18,7 @@ function ShopPage() {
       <CategoriesShopPage data={data}/>
       <Toolbar data={data}/>
       <Products data={data} />
+      <BrandLogos />
     </section>
   );
 }
