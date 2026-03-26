@@ -1,5 +1,6 @@
 import React from 'react';
 import { useShopData } from '../hooks/useShopData'; 
+import InfoTop from '../components/InfoTop';
 
 function ShopPage() {
   const { data, isLoading, error } = useShopData(); 
@@ -9,7 +10,7 @@ function ShopPage() {
 
   return (
     <section>
-      <h2 className="py-20 text-center text-2xl text-primary font-bold">{data.header.title}</h2>
+      <InfoTop data={data}/>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 const shopData = {
     en: {
-        header: {
+        infoTop: {
             title: "Shop",
             breadcrumb: ["Home", "Shop"]
         },
@@ -52,7 +52,7 @@ const shopData = {
     },
 
     tr: {
-        header: {
+        infoTop: {
             title: "Mağaza",
             breadcrumb: ["Ana Sayfa", "Mağaza"]
         },
