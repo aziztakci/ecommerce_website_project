@@ -66,8 +66,7 @@ function Footer() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-5 lg:gap-0 py-6.25">
           <h6 className=" text-light-text text-[14px] font-bold font-montserrat">
             {footerContent.copyright}
-          </h6>
-
+          </h6>          
           <div className="flex gap-[21.5px] mr-7">
             {footerContent.images.map((e) => (
               <a key={e.id} href="#">
@@ -76,6 +75,7 @@ function Footer() {
             ))}
           </div>
         </div>
+        
       </div>
     </footer>
   );
