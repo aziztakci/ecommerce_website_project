@@ -6,7 +6,7 @@ function CategoriesShopPage({ data }) {
 
   return (
     <section className="bg-light-gray-1 pb-9.25 md:pb-12">
-      <PageContent className="flex flex-col md:flex-row md:flex-wrap items-center justify-center max-w-287 mx-auto px-7.5 gap-3.75">
+      <PageContent className="flex flex-col md:flex-row md:flex-wrap items-center justify-center max-w-287 px-7.5 gap-3.75">
         {catContent.map((e) => (
           <div
             key={e.id}

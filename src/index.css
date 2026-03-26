@@ -61,6 +61,10 @@
   --color-faded-primary: #B2E3FF;
   --color-faded-secondary-1: #B9EAA8;
   --color-faded-secondary-2: #FFDCD1;
+
+  /* --- SELECT BUTTON --- */
+  --color-selection-button: #F9F9F9;
+  --color-selection-border: #DDDDDD;
 }
 
 body {

@@ -22,7 +22,11 @@ const shopData = {
         toolbar: {
             resultText: "Showing all 12 results",
             views: "Views:",
-            sortDefault: "Popularity",
+            sortDefault: [{text: "Popularity", value: "popularity"},
+                {text:"Newest", value: "newest"},
+                {text: "Price: Low to High", value:"price-low"},
+                {text: "Price: High to Low", value:"price-high"},
+             ],
             filter: "Filter"
         },
 
@@ -64,18 +68,22 @@ const shopData = {
         },
 
         categories: [
-            { id: "cat-1", title: "KIYAFETLER", items: "5 Ürün", image: null }, // TODO
-            { id: "cat-2", title: "KIYAFETLER", items: "5 Ürün", image: null }, // TODO
-            { id: "cat-3", title: "KIYAFETLER", items: "5 Ürün", image: null }, // TODO
-            { id: "cat-4", title: "KIYAFETLER", items: "5 Ürün", image: null }, // TODO
-            { id: "cat-5", title: "KIYAFETLER", items: "5 Ürün", image: null }, // TODO
+            { id: "cat-1", title: "KIYAFETLER", items: "5 Ürün", image: black }, 
+            { id: "cat-2", title: "KIYAFETLER", items: "5 Ürün", image: blue }, 
+            { id: "cat-3", title: "KIYAFETLER", items: "5 Ürün", image: white },
+            { id: "cat-4", title: "KIYAFETLER", items: "5 Ürün", image: red }, 
+            { id: "cat-5", title: "KIYAFETLER", items: "5 Ürün", image: skateboard }, 
         ],
 
         toolbar: {
-            resultText: "Toplam 12 sonuç gösteriliyor",
-            views: "Görünüm:",
-            sortDefault: "Popülerlik",
-            filter: "Filtre"
+            resultText: "Showing all 12 results",
+            views: "Views:",
+            sortDefault: [{text: "Popüler", value: "popularity"},
+                {text:"En Yeni", value: "newest"},
+                {text: "Fiyat: En Düşük", value:"price-low"},
+                {text: "Fiyat: En Düşük", value:"price-high"},
+             ],
+            filter: "Filter"
         },
 
         products: [
