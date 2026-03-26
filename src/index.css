@@ -5,6 +5,9 @@
   /* --- DROP SHADOWS --- */
   --shadow-light-drop: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
 
+  /* --- SHOP PAGE FILTER --- */
+  --color-filter-black: #21212140;
+
   /* --- FONTS --- */
   --font-montserrat: "Montserrat", sans-serif;
   --font-oswald: "Oswald", sans-serif;

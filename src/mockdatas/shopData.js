@@ -1,3 +1,9 @@
+import black from "../assets/shopPage/black.svg";
+import blue from "../assets/shopPage/blue.svg";
+import red from "../assets/shopPage/red.svg";
+import skateboard from "../assets/shopPage/skateboard.svg";
+import white from "../assets/shopPage/white.svg";
+
 const shopData = {
     en: {
         infoTop: {
@@ -6,11 +12,11 @@ const shopData = {
         },
 
         categories: [
-            { id: "cat-1", title: "CLOTHS", items: "5 Items", image: null }, // TODO
-            { id: "cat-2", title: "CLOTHS", items: "5 Items", image: null }, // TODO
-            { id: "cat-3", title: "CLOTHS", items: "5 Items", image: null }, // TODO
-            { id: "cat-4", title: "CLOTHS", items: "5 Items", image: null }, // TODO
-            { id: "cat-5", title: "CLOTHS", items: "5 Items", image: null }, // TODO
+            { id: "cat-1", title: "CLOTHS", items: "5 Items", image: black }, 
+            { id: "cat-2", title: "CLOTHS", items: "5 Items", image: blue },
+            { id: "cat-3", title: "CLOTHS", items: "5 Items", image: white }, 
+            { id: "cat-4", title: "CLOTHS", items: "5 Items", image: red }, 
+            { id: "cat-5", title: "CLOTHS", items: "5 Items", image: skateboard }, 
         ],
 
         toolbar: {
