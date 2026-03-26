@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { useSelector } from "react-redux";
-import { GlobalContext } from "../contexts/GlobalContext";
+import React from "react";
+import { useHomeData } from "../hooks/useHomeData";
 
 function InfoStrip() {
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const infoContent = allData[lang].infoStrip;
+  
+const { data: homeContent, isLoading } = useHomeData();
+if (isLoading) return null;
+const infoContent = homeContent.infoStrip;
 
   return (
     <section className="flex flex-col justify-center items-center md:flex-row md:flex-wrap min-h-27.75  md:min-h-0 pb-12">

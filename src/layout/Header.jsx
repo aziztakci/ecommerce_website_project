@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "../contexts/GlobalContext";
-import { useSelector } from "react-redux";
+import React from "react";
 import {
   ChevronDown,
   UserRound,
@@ -10,11 +8,13 @@ import {
   Menu,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { useLayoutData } from "../hooks/useLayoutData";
 
 function Header() {
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const headerContent = allData[lang].header;
+
+const { data: layoutContent, isLoading } = useLayoutData();
+if (isLoading) return null;
+const headerContent = layoutContent.header;
 
   return (
     <header className="w-full  max-w-360 mx-auto flex flex-wrap justify-between items-center px-8.75 pt-9 md:pl-49 md:pr-55 md:pt-0 md:my-7.5">

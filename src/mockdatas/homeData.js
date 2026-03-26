@@ -1,6 +1,3 @@
-import face from "../assets/contact/facebook.svg";
-import insta from "../assets/contact/instagram.svg";
-import x from "../assets/contact/twitter.svg";
 import groceryImg from "../assets/images/groceriesCarousel.svg";
 import groceryImg3 from "../assets/images/groceriesCarousel3.png";
 import caramelCone from "../assets/images/caramelCone.svg";
@@ -36,13 +33,6 @@ import colorBrush from "../assets/images/colorBrush.svg";
 
 const homeData = {
     en: {
-        header: {
-            logo: "Bandage",
-            menu: ["Home", "Shop", "About", "Blog", "Contact", "Pages"],
-            menuResp: ["Home", "Product", "Pricing", "Contact"],
-            auth: ["Login", "Register"]
-        },
-
         carousel: {
             slides: [
                 {
@@ -73,7 +63,7 @@ const homeData = {
                     overline: "Your Space",
                     title: "Unique Life",
                     subtitle: "Explore Items",
-                    image: caramelCone, 
+                    image: caramelCone,
                     alt: "caramel cone",
                 },
                 {
@@ -81,7 +71,7 @@ const homeData = {
                     overline: "Ends Today",
                     title: "Elements Style",
                     subtitle: "Explore Items",
-                    image: apple, 
+                    image: apple,
                     alt: "apple",
                 },
                 {
@@ -89,7 +79,7 @@ const homeData = {
                     overline: "Ends Today",
                     title: "Elements Style",
                     subtitle: "Explore Items",
-                    image: rosebeef, 
+                    image: rosebeef,
                     alt: "rose beef",
                 }
             ]
@@ -108,7 +98,7 @@ const homeData = {
                     department: "English Department",
                     priceOld: "$16.48",
                     priceNew: "$6.48",
-                    image: caramelConeMini, 
+                    image: caramelConeMini,
                 },
                 {
                     id: "featured-1-prod-2",
@@ -243,27 +233,27 @@ const homeData = {
             }
         },
 
-        infoStrip : [
+        infoStrip: [
             {
-                id:"infostr-1",
+                id: "infostr-1",
                 number: "1.",
                 title: "Easy to use",
                 description: "Things on a very small that you have any direct",
             },
             {
-                id:"infostr-2",
+                id: "infostr-2",
                 number: "2.",
                 title: "Easy to use",
                 description: "Things on a very small that you have any direct",
             },
             {
-                id:"infostr-3",
+                id: "infostr-3",
                 number: "3.",
                 title: "Easy to use",
                 description: "Things on a very small that you have any direct",
             },
             {
-                id:"infostr-4",
+                id: "infostr-4",
                 number: "4.",
                 title: "Easy to use",
                 description: "Things on a very small that you have any direct",
@@ -309,12 +299,12 @@ const homeData = {
         },
 
         brandLogos: [
-            { id: "brand-logo-1", image: hooli, name:"hooli"},
-            { id: "brand-logo-2", image: lyft, name:"lyft"},
-            { id: "brand-logo-3", image: hood, name:"hood"},
-            { id: "brand-logo-4", image: stripe, name:"stripe"},
-            { id: "brand-logo-5", image: aws, name:"aws"},
-            { id: "brand-logo-6", image: droid, name:"droid" } 
+            { id: "brand-logo-1", image: hooli, name: "hooli" },
+            { id: "brand-logo-2", image: lyft, name: "lyft" },
+            { id: "brand-logo-3", image: hood, name: "hood" },
+            { id: "brand-logo-4", image: stripe, name: "stripe" },
+            { id: "brand-logo-5", image: aws, name: "aws" },
+            { id: "brand-logo-6", image: droid, name: "droid" }
         ],
 
         featuredPosts: {
@@ -334,7 +324,7 @@ const homeData = {
                     imageText: "NEW",
                     alt: "road",
                     mobileImage: color,
-                    
+
                 },
                 {
                     id: "post-madison-2",
@@ -349,7 +339,7 @@ const homeData = {
                     imageText: "NEW",
                     alt: "car",
                     mobileImage: plant,
-                    
+
                 },
                 {
                     id: "post-madison-3",
@@ -364,64 +354,14 @@ const homeData = {
                     imageText: "NEW",
                     alt: "umbrellas",
                     mobileImage: colorBrush,
-                    
+
                 }
             ]
         },
-        
 
-        footer: {
-            title: "Consulting Agency For Your Business",
-            subtitle: "the quick fox jumps over the lazy dog",
-            button: "Contact Us",
-            sections: [
-                {
-                    id: "footer-info",
-                    title: "Company Info",
-                    links: ["About Us", "Carrier", "We are hiring", "Blog"]
-                },
-                {
-                    id: "footer-legal",
-                    title: "Legal",
-                    links: ["About Us", "Carrier", "We are hiring", "Blog"]
-                },
-                {
-                    id: "footer-features",
-                    title: "Features",
-                    links: ["Business Marketing", "User Analytic", "Live Chat", "Unlimited Support"]
-                },
-                {
-                    id: "footer-resources",
-                    title: "Resources",
-                    links: ["IOS & Android", "Watch a Demo", "Customers", "API"]
-                }
-
-            ],
-            getIn: {
-                id: "footer-contact",
-                title: "Get In Touch",
-                phone: "(480) 555-0103",
-                address: "4517 Washington Ave.",
-                email: "debra.holt@example.com"
-            },
-            copyright: "Made With Love By Finland All Right Reserved ",
-            images: [
-                { id: "footer-image-fb", img: face, text: "facebook" },
-                { id: "footer-image-inst", img: insta, text: "instagram" },
-                { id: "footer-image-x", img: x, text: "x-twitter" },
-            ]
-
-        },
     },
 
     tr: {
-        header: {
-            logo: "Bandage",
-            menu: ["Ana Sayfa", "Mağaza", "Hakkında", "Blog", "İletişim", "Sayfalar"],
-            menuResp: ["Ana Sayfa", "Ürünler", "Fiyatlandırma", "İletişim"],
-            auth: ["Giriş", "Kayıt Ol"]
-        },
-
         carousel: {
             slides: [
                 {
@@ -477,7 +417,7 @@ const homeData = {
         featuredProducts1: {
             title: "EN ÇOK SATAN ÜRÜNLER",
             tabs: ["Erkek", "Kadın", "Aksesuar"],
-            image: cardBlue, 
+            image: cardBlue,
             imageTitle: "MOBİLYA",
             imageText: "5 Ürün",
             products: [
@@ -622,27 +562,27 @@ const homeData = {
             }
         },
 
-        infoStrip : [
+        infoStrip: [
             {
-                id:"infostr-tr-1",
+                id: "infostr-tr-1",
                 number: "1.",
                 title: "Kolay kullanım",
                 description: "Doğrudan erişebileceğiniz küçük ölçekli şeyler",
             },
             {
-                id:"infostr-tr-2",
+                id: "infostr-tr-2",
                 number: "2.",
                 title: "Kolay kullanım",
                 description: "Doğrudan erişebileceğiniz küçük ölçekli şeyler",
             },
             {
-                id:"infostr-tr-3",
+                id: "infostr-tr-3",
                 number: "3.",
                 title: "Kolay kullanım",
                 description: "Doğrudan erişebileceğiniz küçük ölçekli şeyler",
             },
             {
-                id:"infostr-tr-4",
+                id: "infostr-tr-4",
                 number: "4.",
                 title: "Kolay kullanım",
                 description: "Doğrudan erişebileceğiniz küçük ölçekli şeyler",
@@ -689,13 +629,13 @@ const homeData = {
 
         brandLogos: [
             { id: "brand-tr-logo-1", image: hooli, name: "hooli" },
-            { id: "brand-tr-logo-2", image: lyft, name: "lyft"},
+            { id: "brand-tr-logo-2", image: lyft, name: "lyft" },
             { id: "brand-tr-logo-3", image: hood, name: "hood" },
             { id: "brand-tr-logo-4", image: stripe, name: "stripe" },
             { id: "brand-tr-logo-5", image: aws, name: "aws" },
-            { id: "brand-tr-logo-6", image: droid, name: "droid" } 
+            { id: "brand-tr-logo-6", image: droid, name: "droid" }
         ],
-        
+
         featuredPosts: {
             title: "Öne Çıkan Yazılar",
             subtitle: "Pratik Tavsiyeler",
@@ -713,7 +653,7 @@ const homeData = {
                     imageText: "YENİ",
                     alt: "road",
                     mobileImage: color,
-                    
+
                 },
                 {
                     id: "post-tr-madison-2",
@@ -728,7 +668,7 @@ const homeData = {
                     imageText: "YENİ",
                     alt: "car",
                     mobileImage: plant,
-                    
+
                 },
                 {
                     id: "post-tr-madison-3",
@@ -743,52 +683,10 @@ const homeData = {
                     imageText: "YENİ",
                     alt: "umbrellas",
                     mobileImage: colorBrush,
-                    
+
                 }
             ]
         },
-
-        footer: {
-            title: "İşletmeniz İçin Danışmanlık Ajansı",
-            subtitle: "atik tilki tembel köpeğin üzerinden atlar",
-            button: "İletişime Geç",
-            sections: [
-                {
-                    id: "footer-tr-info",
-                    title: "Kurumsal Bilgiler",
-                    links: ["Hakkımızda", "Kariyer", "İşe Alım", "Blog"]
-                },
-                {
-                    id: "footer-tr-legal",
-                    title: "Yasal",
-                    links: ["Hakkımızda", "Kariyer", "İşe Alım", "Blog"]
-                },
-                {
-                    id: "footer-tr-features",
-                    title: "Özellikler",
-                    links: ["İş Pazarlama", "Kullanıcı Analitiği", "Canlı Destek", "Sınırsız Destek"]
-                },
-                {
-                    id: "footer-tr-resources",
-                    title: "Kaynaklar",
-                    links: ["IOS & Android", "Demo İzle", "Müşteriler", "API"]
-                },
-
-            ],
-            getIn: {
-                id: "footer-tr-contact",
-                title: "Bize Ulaşın",
-                phone: "(480) 555-0103",
-                address: "4517 Washington Ave.",
-                email: "debra.holt@example.com"
-            },
-            copyright: "Finlandiya Tarafından Yapıldı Bütün Hakları Saklıdır",
-            images: [
-                { id: "footer-image-fb", img: face, text: "facebook" },
-                { id: "footer-image-inst", img: insta, text: "instagram" },
-                { id: "footer-image-x", img: x, text: "x-twitter" },
-            ]
-        }
     }
 };
 

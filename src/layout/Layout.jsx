@@ -4,9 +4,9 @@ import PageContent from "./PageContent";
 
 export default function Layout({ children }) {
   return (
-    <div className="flex flex-col bg-light-background">
+    <div className="flex flex-col min-h-screen bg-light-background">
       <Header />
-      <PageContent>{children}</PageContent> {/* TODO- tüm componenti sarmalama, pageconteti sil, PageContent componentini güncelle. */}
+      <main className="grow w-full">{children}</main> {/* TODO- tüm componenti sarmalama, pageconteti sil, PageContent componentini güncelle. */}
       <Footer />
     </div>
   );

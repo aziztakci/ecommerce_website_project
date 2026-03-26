@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "../contexts/GlobalContext";
-import { useSelector } from "react-redux";
+import React from "react";
 import { Phone, MapPin, Mail } from "lucide-react";
+import { useLayoutData } from "../hooks/useLayoutData";
 
 function Footer() {
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const footerContent = allData[lang].footer;
+
+const { data: layoutContent, isLoading } = useLayoutData();
+if (isLoading) return null;
+const footerContent = layoutContent.footer;
 
   return (
     <footer className="w-full bg-dark-background pt-10">

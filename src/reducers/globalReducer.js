@@ -2,7 +2,7 @@ import homeData from "../mockdatas/homeData";
 
 
 const initialState = {
-  data: homeData, 
+  user: null, 
 };
 
 export const globalReducer = (state = initialState, action) => {

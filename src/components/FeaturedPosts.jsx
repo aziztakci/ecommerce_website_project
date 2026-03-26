@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
-import { useSelector } from 'react-redux';
-import { GlobalContext } from '../contexts/GlobalContext';
+import React from 'react'
 import { AlarmClock,ChartArea,ChevronRight } from 'lucide-react';
+import { useHomeData } from '../hooks/useHomeData';
 
 function FeaturedPosts() {
 
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const postContent = allData[lang].featuredPosts;
+const { data: homeContent, isLoading } = useHomeData();
+if (isLoading) return null; 
+const postContent = homeContent.featuredPosts;
+
 
   return (
     <section className='w-full py-28'>

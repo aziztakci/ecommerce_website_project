@@ -1,17 +1,18 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { useSelector } from "react-redux";
-import { GlobalContext } from "../contexts/GlobalContext";
+
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useHomeData } from "../hooks/useHomeData";
 
 function SliderCaroussel() {
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const carouselContent = allData[lang].carousel;
+  
+const { data: homeContent, isLoading } = useHomeData();
+if (isLoading) return null;
+const carouselContent = homeContent.carousel;
 
   return (
     <div className="w-full h-159.5 md:h-[89.5vh] overflow-hidden">

@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { useSelector } from "react-redux";
-import { GlobalContext } from "../contexts/GlobalContext";
+import React from "react";
+import { useHomeData } from "../hooks/useHomeData";
+
 
 function Bestseller() {
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const bestsellerContent = allData[lang].bestsellerProducts;
+  const { data: homeContent, isLoading } = useHomeData();
+  if (isLoading) return null; 
+  const bestsellerContent = homeContent.bestsellerProducts;
 
   return (
     <section className=" bg-light-gray-1 py-12 px-10 w-full leading-none ">

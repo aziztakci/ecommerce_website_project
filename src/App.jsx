@@ -20,13 +20,3 @@ export default function App() {
   );
 }
 
-/*
-
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const highlightContent = allData[lang].highlightSection;
-  
-  bu yapıyı her component için yazmaya devam etme. appjsx içinde tanımla, prop olarak ilet,
-  const highlightContent = allData[lang].highlightSection; kısmını ise prop olarak alan componentin içinde özelleştir hangi veriyle çalışacaksan...
-  
-  */

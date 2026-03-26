@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "../contexts/GlobalContext";
-import { useSelector } from "react-redux";
+import React from "react";
+import { useHomeData } from "../hooks/useHomeData";
 
 function Highlights() {
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const highlightContent = allData[lang].highlightSection;
+
+const { data: homeContent, isLoading } = useHomeData();
+if (isLoading) return null;
+const highlightContent = homeContent.highlightSection;
+
 
   return (
   <section className="flex flex-col bg-light-gray-1 items-center py-20 px-10 md:flex-row md:flex-wrap lg:flex-nowrap justify-center gap-2.5 md:gap-10.75 ">

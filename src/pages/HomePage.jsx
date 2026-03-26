@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "../contexts/GlobalContext";
-import { useSelector } from "react-redux";
+import React from "react";
 import SliderCaroussel from "../components/SliderCaroussel";
 import Highlights from "../components/Highlights.jsx";
 import FeaturedProducts from "../components/FeaturedProducts";
@@ -9,24 +7,22 @@ import InfoStrip from "../components/InfoStrip.jsx";
 import Bestseller from "../components/Bestseller.jsx";
 import BrandLogos from "../components/BrandLogos.jsx";
 import FeaturedPosts from "../components/FeaturedPosts.jsx";
+import { useHomeData } from "../hooks/useHomeData.js";
 
 function HomePage() {
-  const { lang } = useContext(GlobalContext);
-  const allData = useSelector((state) => state.global.data);
-  const featuredData1 = allData[lang].featuredProducts1;
-  const featuredData2 = allData[lang].featuredProducts2;
-  const popularData1 = allData[lang].mostPopular1;
-  const popularData2 = allData[lang].mostPopular2;
+  const { data: homeContent, isLoading, error } = useHomeData();
+  if (isLoading) return <div className="py-20 text-center text-2xl text-primary font-bold">Yükleniyor...</div>;
+  if (error) return <div>Hata: {error.message}</div>;
 
   return (
     <div>
       <SliderCaroussel />
       <Highlights />
-      <FeaturedProducts data={featuredData1} reverse={false} />
-      <MostPopular data={popularData1} reverse={false} showView={false} />
+      <FeaturedProducts data={homeContent.featuredProducts1} reverse={false} />
+      <MostPopular data={homeContent.mostPopular1} reverse={false} showView={false} />
       <InfoStrip />
-      <FeaturedProducts data={featuredData2} reverse={true} />
-      <MostPopular data={popularData2} reverse={true} showView={true} />
+      <FeaturedProducts data={homeContent.featuredProducts2} reverse={true} />
+      <MostPopular data={homeContent.mostPopular2} reverse={true} showView={true} />
       <Bestseller />
       <BrandLogos />
       <FeaturedPosts />
@@ -35,3 +31,5 @@ function HomePage() {
 }
 
 export default HomePage;
+
+
