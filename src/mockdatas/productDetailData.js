@@ -1,6 +1,10 @@
+import productX from "../assets/productPage/productX.svg";
+import productY from "../assets/productPage/productY.svg";
+
 const productDetailData = {
     en: {
-        header: {
+        infoTop: {
+            title: "Shop",
             breadcrumb: ["Home", "Shop"]
         },
 
@@ -15,10 +19,10 @@ const productDetailData = {
             button: "Select Options",
             colors: ["blue", "green", "orange", "dark"],
             images: {
-                main: null, // TODO
+                main: productY, // TODO
                 gallery: [
-                    null, // TODO
-                    null  // TODO
+                    productX, 
+                    productY  
                 ]
             }
         },
@@ -63,7 +67,8 @@ const productDetailData = {
     },
 
     tr: {
-        header: {
+        infoTop: {
+            title: "Mağaza",
             breadcrumb: ["Ana Sayfa", "Mağaza"]
         },
 

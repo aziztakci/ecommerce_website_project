@@ -5,7 +5,7 @@ import { GlobalContext } from '../contexts/GlobalContext';
 
 export const useProductData = () => { 
     const { lang } = useContext(GlobalContext);
-
+    
     return useQuery({
         queryKey: ['details', lang], 
         queryFn: getProductData,

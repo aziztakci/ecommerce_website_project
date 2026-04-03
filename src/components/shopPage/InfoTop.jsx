@@ -1,19 +1,25 @@
 import React from "react";
 import PageContent from "../../layout/PageContent";
 import { ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function InfoTop({ data }) {
   const infoTopContent = data.infoTop;
-
-
+  const { pathname } = useLocation();
+  const isProductPage = pathname.includes("/product");
 
   return (
     <section className="bg-light-gray-1 py-6">
-      <PageContent className="max-w-272.5 gap-7.5 mx-auto px-5 flex flex-col md:flex-row md:flex-wrap md:justify-between items-center ">
-        <h3 className="font-montserrat font-bold text-text text-[24px] md:py-1.5">
-          {infoTopContent.title}
-        </h3>
+      <PageContent 
+        className={`max-w-272.5 gap-7.5 mx-auto px-5 flex flex-col md:flex-row md:flex-wrap items-center ${
+          isProductPage ? "justify-start" : "justify-between"
+        }`}
+      >        
+        {!isProductPage && (
+          <h3 className="font-montserrat font-bold text-text text-[24px] md:py-1.5">
+            {infoTopContent.title}
+          </h3>
+        )}
         <nav>
           <ul className="flex items-center py-2.5">
             {infoTopContent.breadcrumb.map((e, i) => {

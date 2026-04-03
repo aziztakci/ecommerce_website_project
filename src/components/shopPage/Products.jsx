@@ -1,17 +1,24 @@
 import React from "react";
 import PageContent from "../../layout/PageContent";
+import { useNavigate } from "react-router-dom";
 
 function Products({ data }) {
   const productContent = data;
+  const navigate = useNavigate();
+  const handleProductClick = (productId) => {
+    navigate("/product")
+    // navigate(`/product/${productId}`);
+  };
+
   return (
-    <section>
+    
       <PageContent className="max-w-281 px-10 flex flex-col md:flex-row md:gap-5 md:flex-wrap md:items-center justify-center md:justify-between">
         {productContent.map((e) => (
-          <div key={e.id} className="flex flex-col w-full md:w-59.75 text-center py-12 items-center pb-12">
-            <img src={e.image} alt={e.name} className="w-87 h-[full]" />
+          <div key={e.id} onClick={()=> handleProductClick(e.id)} className="flex flex-col w-full md:w-59.75 text-center py-12  items-center pb-12">
+            <img src={e.image} alt={e.name} className="w-87 h-[full] cursor-pointer" />
             <a
               href="#"
-              className="font-montserrat font-bold text-text text-[14px] pt-5"
+              className="font-montserrat font-bold  text-text text-[14px] pt-5"
             >
               {e.name}
             </a>
@@ -36,7 +43,7 @@ function Products({ data }) {
         {/* TODO / pagination temelini kur tanstack ile, bu bölümü ondan sonra yap, göstermelik yapma...!
           yukarı pt verme, üstteki divde verdin, sadece alt satır-bileşen için pb-12 ver.!!!!!!!*/}
       </PageContent>
-    </section>
+    
   );
 }
 
