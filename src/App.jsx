@@ -20,3 +20,4 @@ export default function App() {
   );
 }
 
+//layout altına toastify tanımla, dil butonu eklediğinde...

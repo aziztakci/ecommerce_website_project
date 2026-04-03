@@ -2,7 +2,7 @@ import React from "react";
 import PageContent from "../layout/PageContent";
 
 function Products({ data }) {
-  const productContent = data.products;
+  const productContent = data;
   return (
     <section>
       <PageContent className="max-w-281 px-10 flex flex-col md:flex-row md:gap-5 md:flex-wrap md:items-center justify-center md:justify-between">
