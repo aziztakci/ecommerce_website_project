@@ -1,5 +1,5 @@
 import React from "react";
-import PageContent from "../layout/PageContent";
+import PageContent from "../../layout/PageContent";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 

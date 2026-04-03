@@ -1,6 +1,6 @@
 import React from 'react'
 import { AlarmClock,ChartArea,ChevronRight } from 'lucide-react';
-import { useHomeData } from '../hooks/useHomeData';
+import { useHomeData } from '../../hooks/useHomeData';
 
 function FeaturedPosts() {
 

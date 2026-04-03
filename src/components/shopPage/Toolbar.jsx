@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PageContent from "../layout/PageContent";
+import PageContent from "../../layout/PageContent";
 import { ChevronDown, List } from "lucide-react";
 import { LayoutGrid } from "lucide-react";
 

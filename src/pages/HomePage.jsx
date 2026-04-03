@@ -1,12 +1,12 @@
 import React from "react";
-import SliderCaroussel from "../components/SliderCaroussel";
-import Highlights from "../components/Highlights.jsx";
-import FeaturedProducts from "../components/FeaturedProducts";
-import MostPopular from "../components/MostPopular.jsx";
-import InfoStrip from "../components/InfoStrip.jsx";
-import Bestseller from "../components/Bestseller.jsx";
-import BrandLogos from "../components/BrandLogos.jsx";
-import FeaturedPosts from "../components/FeaturedPosts.jsx";
+import SliderCaroussel from "../components/homePage/SliderCaroussel";
+import Highlights from "../components/homePage/Highlights.jsx";
+import FeaturedProducts from "../components/homePage/FeaturedProducts.jsx";
+import MostPopular from "../components/homePage/MostPopular.jsx";
+import InfoStrip from "../components/homePage/InfoStrip.jsx";
+import Bestseller from "../components/homePage/Bestseller.jsx";
+import BrandLogos from "../components/homePage/BrandLogos.jsx";
+import FeaturedPosts from "../components/homePage/FeaturedPosts.jsx";
 import { useHomeData } from "../hooks/useHomeData.js";
 
 function HomePage() {

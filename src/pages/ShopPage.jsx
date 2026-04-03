@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useShopData } from '../hooks/useShopData'; 
-import InfoTop from '../components/InfoTop';
-import CategoriesShopPage from '../components/CategoriesShopPage';
-import Toolbar from '../components/Toolbar';
-import Products from '../components/Products';
-import BrandLogos from '../components/BrandLogos';
-import PageNumButons from '../components/PageNumButons';
+import InfoTop from '../components/shopPage/InfoTop';
+import CategoriesShopPage from '../components/shopPage/CategoriesShopPage';
+import Toolbar from '../components/shopPage/Toolbar';
+import Products from '../components/shopPage/Products';
+import BrandLogos from '../components/homePage/BrandLogos';
+import PageNumButons from '../components/shopPage/PageNumButons';
 
 
 function ShopPage() {

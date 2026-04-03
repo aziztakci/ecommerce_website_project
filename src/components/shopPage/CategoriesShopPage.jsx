@@ -1,5 +1,5 @@
 import React from "react";
-import PageContent from "../layout/PageContent";
+import PageContent from "../../layout/PageContent";
 
 function CategoriesShopPage({ data }) {
   const catContent = data.categories;
