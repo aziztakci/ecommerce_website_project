@@ -19,7 +19,7 @@ function Team({teamContent, isLoading}) {
                 <nav>
                     <ul className='flex gap-[20.5px] justify-center'>
                         {teamContent.icons.map((icon)=>(
-                            <a href="#"> <img key={icon.id} src={icon.image} alt='icon'/></a>
+                            <a href="#" key={icon.id}> <img src={icon.image} alt='icon'/></a>
                         ))}
                     </ul>
                 </nav>

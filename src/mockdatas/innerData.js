@@ -3,6 +3,9 @@ import team1 from "../assets/team/team1.svg";
 import face from "../assets/contact/facebook.svg";
 import insta from "../assets/contact/instagram.svg";
 import x from "../assets/contact/twitter.svg";
+import phone from "../assets/contact/phone.svg";
+import pin from "../assets/contact/pin.svg";
+import mail from "../assets/contact/mail.svg";
 
 
  const innerData = {
@@ -12,11 +15,22 @@ import x from "../assets/contact/twitter.svg";
             text: "Questions & Answers",
             description: "Problems trying to resolve the conflict between the two major realms of Classical physics:",
             cta: "CONTACT US",
+            
+            main: {
+                title:"We help small businesses \n with big ideas",
+                subtitle: "VISIT OUR OFFICE",
+                cards: [
+                    {id:"cardmain1", image:phone, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain1", image:pin, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain1", image:mail, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                ]
+            },
         },
+
 
         team: {
             title: "Meet Our Team",
-            description: "Problems trying to resolve the conflict between \n the two major realms of Classical physics: Newtonian mechanics",
+            description: "Problems trying to resolve the conflict between  the two major realms of Classical physics: Newtonian mechanics",
             members: [
                 { id: "squad1", name: "Aziz Takcı", title: "Full Stack Developer", image: team1 },
                 { id: "squad2", name: "Gökhan Özdemir", title: "Project Manager", image: team1 },
@@ -33,8 +47,17 @@ import x from "../assets/contact/twitter.svg";
         contact: {
             image: background,
             text: "Questions & Answers",
-            description: "Problems trying to resolve the conflict between the two major realms of Classical physics:",
+            description: "Problems trying to resolve the conflict between \n the two major realms of Classical physics:",
             cta: "CONTACT US",
+            main: {
+                title:"We help small businesses \n with big ideas",
+                subtitle: "OFİSİMİZİ ZİYARET EDİN",
+                cards: [
+                    {id:"cardmain1", image:phone, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain1", image:pin, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain1", image:mail, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                ]
+            },
         },
         team: {
             title: "Ekibimiz İle Tanışın",
