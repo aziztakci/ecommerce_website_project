@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import ContactTop from "../components/contactPage/ContactTop";
 import { useInnerData } from "../hooks/useInnerData";
 import ContactMain from "../components/contactPage/ContactMain";
+import ContactOffer from "../components/contactPage/ContactOffer";
 
 function ContactPage() {
  
@@ -15,6 +16,7 @@ function ContactPage() {
     <>
       <ContactTop contactContent={data.contact} isLoading={isLoading}/>
       <ContactMain contactContent={data.contact} isLoading={isLoading}/>
+      <ContactOffer contactContent={data.contact} isLoading={isLoading}/>
     </>
   );
 }

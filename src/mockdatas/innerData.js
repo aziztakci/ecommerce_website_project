@@ -21,10 +21,16 @@ import mail from "../assets/contact/mail.svg";
                 subtitle: "VISIT OUR OFFICE",
                 cards: [
                     {id:"cardmain1", image:phone, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
-                    {id:"cardmain1", image:pin, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
-                    {id:"cardmain1", image:mail, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain2", image:pin, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain3", image:mail, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
                 ]
             },
+
+            offer: {
+                title: "Let's Talk",
+                subtitle: "WE can't WAIT TO MEET YOU",
+                button: "Try it free now",
+            }
         },
 
 
@@ -53,10 +59,15 @@ import mail from "../assets/contact/mail.svg";
                 title:"We help small businesses \n with big ideas",
                 subtitle: "OFİSİMİZİ ZİYARET EDİN",
                 cards: [
-                    {id:"cardmain1", image:phone, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
-                    {id:"cardmain1", image:pin, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
-                    {id:"cardmain1", image:mail, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain4", image:phone, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain5", image:pin, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    {id:"cardmain6", image:mail, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
                 ]
+            },
+            offer: {
+                title: "Let's Talk",
+                subtitle: "WE can't WAIT TO MEET YOU",
+                button: "Try it free now",
             },
         },
         team: {
