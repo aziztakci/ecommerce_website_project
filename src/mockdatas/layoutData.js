@@ -1,6 +1,7 @@
 import face from "../assets/contact/facebook.svg";
 import insta from "../assets/contact/instagram.svg";
 import x from "../assets/contact/twitter.svg";
+import background from "../assets/contact/background.svg";
 
 const layoutData = {
     en: {
@@ -52,6 +53,12 @@ const layoutData = {
             ]
 
         },
+        contact: {
+            image: background,
+            text: "Questions & Answers",
+            description: "Problems trying to resolve the conflict between the two major realms of Classical physics:",
+            cta: "CONTACT US",
+        },
     },
     tr: {
         header: {
@@ -100,7 +107,13 @@ const layoutData = {
                 { id: "footer-image-inst", img: insta, text: "instagram" },
                 { id: "footer-image-x", img: x, text: "x-twitter" },
             ]
-        }
+        },
+        contact: {
+            image: background, 
+            text: "Questions & Answers",
+            description: "Problems trying to resolve the conflict between the two major realms of Classical physics:",
+            cta: "CONTACT US",
+        },
     }
 };
 

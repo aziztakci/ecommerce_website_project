@@ -62,7 +62,7 @@ function ProductDetail({ data }) {
          
           <div className="border border-light-gray-2 w-full"></div>
           {/* /br */}
-          <div className="gap-1.5 flex pt-[30px] pb-[62px]">  
+          <div className="gap-1.5 flex pt-7.5 pb-15.5">  
             <span className="h-7 w-7  rounded-full bg-primary"></span>
             <span className="h-7 w-7  rounded-full bg-secondary-1"></span>
             <span className="h-7 w-7  rounded-full bg-alert"></span>

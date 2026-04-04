@@ -5,6 +5,8 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage.jsx";
 import ProductDetailPage from "./pages/ProductDetailPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+
 
 export default function App() {
   return (
@@ -15,6 +17,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/product" element={<ProductDetailPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         
       </Layout>
