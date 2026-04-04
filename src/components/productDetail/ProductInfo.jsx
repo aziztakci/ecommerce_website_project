@@ -4,14 +4,14 @@ import { ChevronRight } from 'lucide-react';
 function ProductInfo({data}) {
     
   return (
-    <PageContent className='detailcontainer flex flex-col md:flex-row md:flex-wrap items-center md:items-start justify-center gap-7.5 pt-10 max-w-[1090px] px-5'>
+    <PageContent className='detailcontainer flex flex-col md:flex-row md:flex-wrap items-center md:items-start justify-center gap-7.5 pt-10 max-w-272.5 px-5'>
 
-            <img src={data.image} alt="product" className='w-[316px] h-auto' />
+            <img src={data.image} alt="product" className='w-79 h-auto' />
 
-            <div className='textcontainer1 flex flex-col max-w-[330px] h-auto'>
+            <div className='textcontainer1 flex flex-col max-w-82.5 h-auto'>
                 <h3 className='font-bold text-text text-[24px] pb-7.5'>{data.textBlock.title}</h3>
                 {data.textBlock.paragraphs.map((e,i)=>(
-                    <p key={i} className='font-normal text-second-text text-[14px] w-[310px] pb-5 '>{e}</p>
+                    <p key={i} className='font-normal text-second-text text-[14px] w-77.5 pb-5 '>{e}</p>
                 ))}
                 
             </div>

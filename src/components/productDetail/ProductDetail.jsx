@@ -14,10 +14,10 @@ function ProductDetail({ data }) {
 
   return (
     <section className="bg-light-gray-1">
-      <PageContent className="detailcontainer flex flex-col md:flex-row gap-[30px] justify-center md:gap-[34px] max-w-[1090px] px-5">
-        <div className="imagecontainer flex flex-col items-center md:items-start gap-[42px] md:gap-5">
+      <PageContent className="detailcontainer flex flex-col md:flex-row gap-7.5 justify-center md:gap-8.5 max-w-272.5 px-5">
+        <div className="imagecontainer flex flex-col items-center md:items-start gap-10.5 md:gap-5">
           <img
-            className="w-full max-w-[506px] h-auto  object-cover transition-all duration-300"
+            className="w-full max-w-126.5 h-auto  object-cover transition-all duration-300"
             src={currentImage}
             alt="product"
           />
@@ -26,7 +26,7 @@ function ProductDetail({ data }) {
               <img
                 key={i}
                 onClick={() => setCurrentImage(e)}
-                className={`w-[100px] h-[75px] object-cover cursor-pointer transition-opacity hover:opacity-80 ${
+                className={`w-25 h-18.75 object-cover cursor-pointer transition-opacity hover:opacity-80 ${
                   currentImage === e
                     ? "opacity-50"
                     : "opacity-100 hover:opacity-80"
@@ -37,7 +37,7 @@ function ProductDetail({ data }) {
             ))}
           </div>
         </div>
-        <div className="textcontainer flex flex-col mx-auto w-full md:w-[515px] px-[26px]">
+        <div className="textcontainer flex flex-col mx-auto w-full md:w-128.75 px-6.5">
           <h4 className="font-normal text-text text-[20px] pt-2.5">{detailContent.title}</h4>
           <div className="ratescore flex gap-2.5 pt-3">   
             <div className="flex gap-1.25">
@@ -57,12 +57,12 @@ function ProductDetail({ data }) {
           <h6 className="font-bold text-second-text text-[14px] pt-1.25">{detailContent.availabilityText}
             <span className="font-bold text-primary text-[14px]">{detailContent.availability}</span>
           </h6>
-          <p className="font-normal text-light-text-gray-3 pt-8 pb-4 md:pb-[25px]">{detailContent.description}</p>
+          <p className="font-normal text-light-text-gray-3 pt-8 pb-4 md:pb-6.25">{detailContent.description}</p>
           
          
           <div className="border border-light-gray-2 w-full"></div>
           {/* /br */}
-          <div className="pt-5 gap-1.5 flex pt-[30px] pb-[62px]">  
+          <div className="gap-1.5 flex pt-[30px] pb-[62px]">  
             <span className="h-7 w-7  rounded-full bg-primary"></span>
             <span className="h-7 w-7  rounded-full bg-secondary-1"></span>
             <span className="h-7 w-7  rounded-full bg-alert"></span>

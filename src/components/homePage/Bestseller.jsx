@@ -6,14 +6,14 @@ function Bestseller({ data, isLoading }) {
 
   return (
     <section className="bg-light-gray-1 py-12 px-5 md:px-10 w-full leading-none">
-      <div className="flex flex-col max-w-[1090px] mx-auto">
+      <div className="flex flex-col max-w-272.5 mx-auto">
         <h3 className="font-montserrat font-bold text-text text-[24px] pb-6">
           {bestsellerContent.title}
         </h3>
         
         <div className="border-b border-light-gray-2 w-full mb-6 md:mb-8"></div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[30px] gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-7.5 gap-y-12">
           {bestsellerContent.products.map((e) => (
             <div key={e.id} className="flex flex-col bg-white">
               

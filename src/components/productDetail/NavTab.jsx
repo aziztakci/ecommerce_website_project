@@ -4,9 +4,9 @@ import PageContent from '../../layout/PageContent';
 function NavTab({dataTabs}) {
     const [activeTab, setActiveTab] = useState(dataTabs[0].id);
   return (
-    <PageContent className='flex flex-col justify-center items-center max-w-[1090px] px-5'>
+    <PageContent className='flex flex-col justify-center items-center max-w-272.5 px-5'>
       <nav>
-            <ul className='flex gap-12 py-[24px]'>
+            <ul className='flex gap-12 py-6'>
           {dataTabs.map((e) => {
             const isActive = activeTab === e.id;
             
