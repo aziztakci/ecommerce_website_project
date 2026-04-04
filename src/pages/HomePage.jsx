@@ -23,7 +23,7 @@ function HomePage() {
       <InfoStrip />
       <FeaturedProducts data={homeContent.featuredProducts2} reverse={true} />
       <MostPopular data={homeContent.mostPopular2} reverse={true} showView={true} />
-      <Bestseller />
+      <Bestseller data={homeContent} isLoading={isLoading}/>
       <BrandLogos />
       <FeaturedPosts />
     </div>

@@ -4,6 +4,8 @@ import InfoTop from '../components/shopPage/InfoTop.jsx';
 import ProductDetail from '../components/productDetail/ProductDetail.jsx';
 import ProductInfo from '../components/productDetail/ProductInfo.jsx';
 import NavTab from '../components/productDetail/NavTab.jsx';
+import Bestseller from '../components/homePage/Bestseller.jsx';
+import BrandLogos from '../components/homePage/BrandLogos.jsx';
 
 function ProductDetailPage() {
 
@@ -17,6 +19,8 @@ function ProductDetailPage() {
       <ProductDetail data={data.product} />
       <NavTab dataTabs={data.tabs} />
       <ProductInfo data={data.content} />
+      <Bestseller data={data} isLoading={isLoading}/>
+      <BrandLogos />
     </div>
   )
 }
