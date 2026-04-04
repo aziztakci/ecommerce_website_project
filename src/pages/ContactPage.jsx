@@ -1,10 +1,17 @@
 import React from "react";
 import { useLayoutData } from "../hooks/useLayoutData";
+import { useNavigate } from "react-router-dom";
 
 function ContactPage() {
+  const navigate = useNavigate();
   const { data, isLoading } = useLayoutData();
   if (isLoading) return null;
   const contactContent = data.contact;
+
+  const handleCtaClick = () => {
+    navigate("/team")
+  };
+
   return (
     <section className="relative w-full h-117 md:h-111.5 overflow-hidden flex items-center justify-center">
       <img
@@ -20,7 +27,7 @@ function ContactPage() {
         <p className="text-second-text text-[14px] ">
           {contactContent.description}
         </p>
-        <button className="text-primary text-[14px] font-bold ">
+        <button onClick={()=>handleCtaClick()} className="text-primary text-[14px] font-bold cursor-pointer hover:text-hover-text">
           {contactContent.cta}
         </button>
       </div>

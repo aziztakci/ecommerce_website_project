@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage.jsx";
 import ProductDetailPage from "./pages/ProductDetailPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import TeamPage from "./pages/TeamPage.jsx";
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/product" element={<ProductDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/team" element={<TeamPage />} />
           </Routes>
         
       </Layout>
