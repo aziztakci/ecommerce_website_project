@@ -1,5 +1,6 @@
 import productX from "../assets/productPage/productX.svg";
 import productY from "../assets/productPage/productY.svg";
+import room from "../assets/productPage/room.svg";
 
 const productDetailData = {
     en: {
@@ -20,7 +21,7 @@ const productDetailData = {
             button: "Select Options",
             colors: ["blue", "green", "orange", "dark"],
             images: {
-                main: productY, // TODO
+                main: productY, 
                 gallery: [
                     productX, 
                     productY  
@@ -28,14 +29,14 @@ const productDetailData = {
             }
         },
 
-        tabs: {
-            description: "Description",
-            additionalInfo: "Additional Information",
-            reviews: "Reviews (0)"
-        },
+        tabs: [
+            {id:"producttab1", name: "Description"},
+            {id:"producttab2", name: "Additional Information"},
+            {id:"producttab3", name: "Reviews", count:"(0)"}
+        ],
 
         content: {
-            image: null, // TODO
+            image: room, 
 
             textBlock: {
                 title: "the quick fox jumps over",
@@ -49,19 +50,19 @@ const productDetailData = {
             listBlock1: {
                 title: "the quick fox jumps over",
                 items: [
-                    "the quick fox jumps over the lazy dog",
-                    "the quick fox jumps over the lazy dog",
-                    "the quick fox jumps over the lazy dog",
-                    "the quick fox jumps over the lazy dog"
+                    {id:"listItem1", text:"the quick fox jumps over the lazy dog"},
+                    {id:"listItem2",text:"the quick fox jumps over the lazy dog"},
+                    {id:"listItem3",text:"the quick fox jumps over the lazy dog"},
+                    {id:"listItem4",text:"the quick fox jumps over the lazy dog"},
                 ]
             },
 
             listBlock2: {
                 title: "the quick fox jumps over",
                 items: [
-                    "the quick fox jumps over the lazy dog",
-                    "the quick fox jumps over the lazy dog",
-                    "the quick fox jumps over the lazy dog"
+                    {id:"list2Item1", text:"the quick fox jumps over the lazy dog"},
+                    {id:"list2Item2",text:"the quick fox jumps over the lazy dog"},
+                    {id:"list2Item3",text:"the quick fox jumps over the lazy dog"},             
                 ]
             }
         }
@@ -85,22 +86,22 @@ const productDetailData = {
             button: "Seçenekleri Seç",
             colors: ["blue", "green", "orange", "dark"],
             images: {
-                main: null, // TODO
+                main: productY, 
                 gallery: [
-                    null, // TODO
-                    null  // TODO
+                    productX, 
+                    productY  
                 ]
             }
         },
 
-        tabs: {
-            description: "Açıklama",
-            additionalInfo: "Ek Bilgiler",
-            reviews: "Yorumlar (0)"
-        },
+        tabs: [
+            {id:"producttab4",name: "Açıklama"},
+            {id:"producttab5",name: "Ek Bilgiler"},
+            {id:"producttab6",name: "Yorumlar", count:"(0)"}
+        ],
 
         content: {
-            image: null, // TODO
+            image: room, 
 
             textBlock: {
                 title: "hızlı tilki üzerinden atlar",
@@ -114,19 +115,19 @@ const productDetailData = {
             listBlock1: {
                 title: "hızlı tilki üzerinden atlar",
                 items: [
-                    "hızlı tilki tembel köpeğin üzerinden atlar",
-                    "hızlı tilki tembel köpeğin üzerinden atlar",
-                    "hızlı tilki tembel köpeğin üzerinden atlar",
-                    "hızlı tilki tembel köpeğin üzerinden atlar"
+                    {id:"listItem5", text:"the quick fox jumps over the lazy dog"},
+                    {id:"listItem6",text:"the quick fox jumps over the lazy dog"},
+                    {id:"listItem7",text:"the quick fox jumps over the lazy dog"},
+                    {id:"listItem8",text:"the quick fox jumps over the lazy dog"},
                 ]
             },
 
             listBlock2: {
                 title: "hızlı tilki üzerinden atlar",
                 items: [
-                    "hızlı tilki tembel köpeğin üzerinden atlar",
-                    "hızlı tilki tembel köpeğin üzerinden atlar",
-                    "hızlı tilki tembel köpeğin üzerinden atlar"
+                    {id:"list2Item4", text:"the quick fox jumps over the lazy dog"},
+                    {id:"list2Item5",text:"the quick fox jumps over the lazy dog"},
+                    {id:"list2Item6",text:"the quick fox jumps over the lazy dog"},             
                 ]
             }
         }

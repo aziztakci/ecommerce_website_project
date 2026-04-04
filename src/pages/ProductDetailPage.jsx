@@ -2,6 +2,8 @@ import React from 'react'
 import { useProductData } from "../hooks/useProductData.js";
 import InfoTop from '../components/shopPage/InfoTop.jsx';
 import ProductDetail from '../components/productDetail/ProductDetail.jsx';
+import ProductInfo from '../components/productDetail/ProductInfo.jsx';
+import NavTab from '../components/productDetail/NavTab.jsx';
 
 function ProductDetailPage() {
 
@@ -13,6 +15,8 @@ function ProductDetailPage() {
     <div>
       <InfoTop data={data}/>
       <ProductDetail data={data.product} />
+      <NavTab dataTabs={data.tabs} />
+      <ProductInfo data={data.content} />
     </div>
   )
 }
