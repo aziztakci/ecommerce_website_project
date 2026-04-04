@@ -10,10 +10,11 @@ const productDetailData = {
 
         product: {
             title: "Floating Phone",
+            stars: "4",
             reviews: "10 Reviews",
             price: "$1,139.33",
             availabilityText: "Availability :",
-            availability: "In Stock",
+            availability: " In Stock",
             description:
                 "Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.",
             button: "Select Options",
@@ -74,10 +75,11 @@ const productDetailData = {
 
         product: {
             title: "Yüzen Telefon",
+            stars: "4",
             reviews: "10 Yorum",
             price: "$1,139.33",
             availabilityText: "Stok Durumu :",
-            availability: "Stokta Var",
+            availability: " Stokta Var",
             description:
                 "Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.",
             button: "Seçenekleri Seç",

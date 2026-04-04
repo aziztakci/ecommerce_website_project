@@ -26,6 +26,7 @@
   --color-secondary-2: #3C403D;
   --color-dark-background: #252B42;
   --color-light-background: #FFFFFF;
+  --color-pure-black: #000000;
 
   /* --- STATUS & ALERT COLORS --- */
   --color-success: #2DC071;
@@ -38,6 +39,7 @@
   /* --- GRAYSCALE COLORS --- */
   --color-light-gray-1: #FAFAFA;
   --color-light-gray-2: #ECECEC;
+  --color-light-gray-3: #E8E8E8;
 
   /* --- TEXT COLORS --- */
   --color-primary-text: #23A6F0;
@@ -58,6 +60,7 @@
   /* --- FADED COLORS --- */
   --color-light-text-gray-1: #FAFAFA;
   --color-light-text-gray-2: #ECECEC;
+  --color-light-text-gray-3: #858585;
   --color-faded-primary: #B2E3FF;
   --color-faded-secondary-1: #B9EAA8;
   --color-faded-secondary-2: #FFDCD1;
