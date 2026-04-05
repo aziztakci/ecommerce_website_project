@@ -7,6 +7,7 @@ import AboutVideoSection from "../components/aboutPage/AboutVideoSection";
 import Team from "../components/teamPage/Team";
 import AboutUpperBrand from "../components/aboutPage/AboutUpperBrand";
 import BrandLogos from "../components/homePage/BrandLogos";
+import AboutBottom from "../components/aboutPage/AboutBottom";
 
 function AboutPage() {
   const { data, isLoading, error } = useInnerData();
@@ -27,6 +28,7 @@ function AboutPage() {
       <Team teamContent={data.team} isLoading={isLoading}/>
       <AboutUpperBrand  aboutContent={data.about} isLoading={isLoading}/>
       <BrandLogos />
+      <AboutBottom aboutContent={data.about} isLoading={isLoading}/>
 
     </>
   );

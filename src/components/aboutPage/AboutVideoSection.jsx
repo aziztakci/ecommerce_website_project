@@ -8,7 +8,7 @@ function AboutVideoSection({ aboutContent, isLoading }) {
   return (
     <PageContent className="px-20 py-28 items-center">
       <video
-        className="w-full max-w-[1100px] rounded-lg shadow-lg"
+        className="w-full max-w-275 rounded-lg shadow-lg"
         src={video.videoUrl}
         controls // Oynat/Durdur butonlarını getirir
         muted // Otomatik oynatmak istiyorsan şarttır
