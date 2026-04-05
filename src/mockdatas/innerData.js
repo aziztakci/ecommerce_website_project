@@ -84,7 +84,7 @@ const innerData = {
                 ]
             },
         },
-         about: {
+        about: {
             top: {
                 title: "ABOUT US",
                 subtitle: "ABOUT COMPANY",
@@ -97,17 +97,19 @@ const innerData = {
             strip: {
                 title: "Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.",
                 subtitle: "Problems trying",
-                description:"Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics",
+                description: "Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics",
             },
 
             infoStrip: [
-                {id:"infostrip1", value: "15K", description:"Happy Customers",},
-                {id:"infostrip2", value: "150K", description:"Monthly Visitors",},
-                {id:"infostrip3", value: "15", description:"Countries  Worldwide",},
-                {id:"infostrip4", value: "100", description: "Top Partners",},
+                { id: "infostrip1", value: "15K", description: "Happy Customers", },
+                { id: "infostrip2", value: "150K", description: "Monthly Visitors", },
+                { id: "infostrip3", value: "15", description: "Countries  Worldwide", },
+                { id: "infostrip4", value: "100", description: "Top Partners", },
             ],
 
-            video: video,
+            video: {
+                videoUrl: "/about-video.mp4",                
+            },
 
             upperBrandLogo: {
                 title: "Big Companies Are Here",
@@ -195,17 +197,19 @@ const innerData = {
             strip: {
                 title: "Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.",
                 subtitle: "Problems trying",
-                description:"Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics",
+                description: "Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics",
             },
 
             infoStrip: [
-                {id:"infostrip5", value: "15K", description:"Mutlu Müşteriler",},
-                {id:"infostrip6", value: "150K", description:"Aylık Ziyaretçi",},
-                {id:"infostrip7", value: "15", description:"Küresel İş Ortakları",},
-                {id:"infostrip8", value: "100", description: "Ortaklar",},
+                { id: "infostrip5", value: "15K", description: "Mutlu Müşteriler", },
+                { id: "infostrip6", value: "150K", description: "Aylık Ziyaretçi", },
+                { id: "infostrip7", value: "15", description: "Küresel İş Ortakları", },
+                { id: "infostrip8", value: "100", description: "Ortaklar", },
             ],
 
-            video: video,
+            video: {
+                videoUrl: "/about-video.mp4",                
+            },
 
             upperBrandLogo: {
                 title: "Güçlü Şirketler Burada",

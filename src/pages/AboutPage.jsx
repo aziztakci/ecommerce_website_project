@@ -3,6 +3,7 @@ import { useInnerData } from "../hooks/useInnerData";
 import AboutTop from "../components/aboutPage/AboutTop";
 import AboutStrip from "../components/aboutPage/AboutStrip";
 import AboutInfoStrip from "../components/aboutPage/AboutStripInfo";
+import AboutVideoSection from "../components/aboutPage/AboutVideoSection";
 
 function AboutPage() {
   const { data, isLoading, error } = useInnerData();
@@ -19,6 +20,7 @@ function AboutPage() {
       <AboutTop aboutContent={data.about} isLoading={isLoading}/>
       <AboutStrip aboutContent={data.about} isLoading={isLoading}/>
       <AboutInfoStrip aboutContent={data.about} isLoading={isLoading}/>
+      <AboutVideoSection aboutContent={data.about} isLoading={isLoading} />
     </>
   );
 }
