@@ -6,7 +6,7 @@ function AboutStrip({aboutContent, isLoading}) {
     const strip = aboutContent.strip;
 
   return (
-    <PageContent className='flex flex-col md:flex-row px-10 gap-[60px] items-center text-center md:text-start pt-10'>
+    <PageContent className='flex flex-col md:flex-row px-10 gap-15 items-center text-center md:text-start pt-10'>
         <div className='lefttextcontainer flex flex-col gap-6'>
             <p className='font-normal text-danger-text text-[14px] '>{strip.subtitle}</p>
             <h3 className='font-bold text-text text-[24px] '>{strip.title}</h3>
