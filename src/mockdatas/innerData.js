@@ -3,6 +3,7 @@ import team1 from "../assets/team/team1.svg";
 import face from "../assets/contact/facebook.svg";
 import insta from "../assets/contact/instagram.svg";
 import x from "../assets/contact/twitter.svg";
+import linkedin from "../assets/contact/linkedin.svg";
 import phone from "../assets/contact/phone.svg";
 import pin from "../assets/contact/pin.svg";
 import mail from "../assets/contact/mail.svg";
@@ -67,7 +68,19 @@ const innerData = {
                     { id: "infoImg1", image: sidetwo, },
                     { id: "infoImg1", image: side, },
                 ]
-            }
+            },
+
+            offer: {
+                title: "Start your 14 days free trial",
+                description: "Met minim Mollie non desert Alamo est sit cliquey dolor \n do met sent. RELIT official consequent.",
+                button: "Try it free now",
+                icons: [
+                    {id:"teamoffer1", image:x},
+                    {id:"teamoffer1", image:face},
+                    {id:"teamoffer1", image:insta},
+                    {id:"teamoffer1", image:linkedin},
+                ]
+            },
         },
     },
 
@@ -122,7 +135,21 @@ const innerData = {
                     { id: "infoImg1", image: side, },
                     { id: "infoImg1", image: sidetwo, },
                 ]
-            }
+            },
+
+            offer: {
+                title: "Start your 14 days free trial",
+                description: "Met minim Mollie non desert Alamo est sit cliquey dolor \n do met sent. RELIT official consequent.",
+                button: "Try it free now",
+                icons: [
+                    {id:"teamoffer1", image:x},
+                    {id:"teamoffer1", image:face},
+                    {id:"teamoffer1", image:insta},
+                    {id:"teamoffer1", image:linkedin},
+                ]
+            },
+
+
         },
 
     }

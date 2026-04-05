@@ -4,6 +4,7 @@ import Team from "../components/teamPage/Team";
 import TeamTop from "../components/teamPage/TeamTop";
 import InfoTop from "../components/shopPage/InfoTop";
 import TeamMain from "../components/teamPage/TeamMain";
+import TeamOffer from "../components/teamPage/TeamOffer";
 
 function TeamPage() {
   const { data, isLoading, error } = useInnerData();
@@ -21,7 +22,7 @@ function TeamPage() {
       <InfoTop data={data.team}/>
       <TeamMain teamContent={data.team} isLoading={isLoading}/>
       <Team teamContent={data.team} isLoading={isLoading}/>
-      
+      <TeamOffer teamContent={data.team} isLoading={isLoading}/>
     </>
   );
 }
