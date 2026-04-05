@@ -6,6 +6,9 @@ import x from "../assets/contact/twitter.svg";
 import phone from "../assets/contact/phone.svg";
 import pin from "../assets/contact/pin.svg";
 import mail from "../assets/contact/mail.svg";
+import main from "../assets/team/main.svg";
+import side from "../assets/team/side.svg";
+import sidetwo from "../assets/team/sidetwo.svg";
 
 
 const innerData = {
@@ -56,6 +59,15 @@ const innerData = {
                 title: "Team",
                 breadcrumb: ["Home", "Team"],
             },
+            infoMain: {
+                mainImage: main,
+                images: [
+                    { id: "infoImg1", image: side, },
+                    { id: "infoImg1", image: sidetwo, },
+                    { id: "infoImg1", image: sidetwo, },
+                    { id: "infoImg1", image: side, },
+                ]
+            }
         },
     },
 
@@ -101,6 +113,16 @@ const innerData = {
                 title: "Team",
                 breadcrumb: ["Home", "Team"],
             },
+
+            infoMain: {
+                mainImage: main,
+                images: [
+                    { id: "infoImg1", image: side, },
+                    { id: "infoImg1", image: sidetwo, },
+                    { id: "infoImg1", image: side, },
+                    { id: "infoImg1", image: sidetwo, },
+                ]
+            }
         },
 
     }
