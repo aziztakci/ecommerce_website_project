@@ -12,7 +12,7 @@ import side from "../assets/team/side.svg";
 import sidetwo from "../assets/team/sidetwo.svg";
 import framedots from "../assets/about/framedots.svg";
 import shopping from "../assets/about/shopping.svg";
-import video from "../assets/about/video.svg";
+import botimage from "../assets/about/botimg.svg";
 
 const innerData = {
     en: {
@@ -115,6 +115,14 @@ const innerData = {
                 title: "Big Companies Are Here",
                 description: "Problems trying to resolve the conflict between \n the two major realms of Classical physics: Newtonian mechanics",
             },
+            
+            bottom: {
+                title: "Now Let's grow Yours",
+                subtitle: "WORK WITH US",
+                description: "The gradual accumulation of information about atomic and small-scale behavior during the first quarter of the 20th",
+                button: "Button",
+                image: botimage,
+            },
 
         },
     },
@@ -214,6 +222,14 @@ const innerData = {
             upperBrandLogo: {
                 title: "Güçlü Şirketler Burada",
                 description: "Problems trying to resolve the conflict between \n the two major realms of Classical physics: Newtonian mechanics",
+            },
+
+            bottom: {
+                title: "Now Let's grow Yours",
+                subtitle: "WORK WITH US",
+                description: "The gradual accumulation of information about atomic and small-scale behavior during the first quarter of the 20th",
+                button: "Button",
+                image: botimage,
             },
 
         },
