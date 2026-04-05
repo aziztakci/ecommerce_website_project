@@ -8,21 +8,21 @@ import pin from "../assets/contact/pin.svg";
 import mail from "../assets/contact/mail.svg";
 
 
- const innerData = {
+const innerData = {
     en: {
         contact: {
             image: background,
             text: "Questions & Answers",
             description: "Problems trying to resolve the conflict between the two major realms of Classical physics:",
             cta: "CONTACT US",
-            
+
             main: {
-                title:"We help small businesses \n with big ideas",
+                title: "We help small businesses \n with big ideas",
                 subtitle: "VISIT OUR OFFICE",
                 cards: [
-                    {id:"cardmain1", image:phone, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
-                    {id:"cardmain2", image:pin, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
-                    {id:"cardmain3", image:mail, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    { id: "cardmain1", image: phone, mail1: "georgia.young@example.com", mail2: "georgia.young@ple.com", text: "Get Support", button: "Submit Request" },
+                    { id: "cardmain2", image: pin, mail1: "georgia.young@example.com", mail2: "georgia.young@ple.com", text: "Get Support", button: "Submit Request" },
+                    { id: "cardmain3", image: mail, mail1: "georgia.young@example.com", mail2: "georgia.young@ple.com", text: "Get Support", button: "Submit Request" },
                 ]
             },
 
@@ -46,6 +46,16 @@ import mail from "../assets/contact/mail.svg";
                 { id: "iconinsta", image: insta },
                 { id: "iconx", image: x },
             ],
+
+            top: {
+                title: "Innovation tailored for you",
+                subtitle: "WHAT WE DO",
+            },
+
+            infoTop: {
+                title: "Team",
+                breadcrumb: ["Home", "Team"],
+            },
         },
     },
 
@@ -56,12 +66,12 @@ import mail from "../assets/contact/mail.svg";
             description: "Problems trying to resolve the conflict between \n the two major realms of Classical physics:",
             cta: "CONTACT US",
             main: {
-                title:"We help small businesses \n with big ideas",
+                title: "We help small businesses \n with big ideas",
                 subtitle: "OFİSİMİZİ ZİYARET EDİN",
                 cards: [
-                    {id:"cardmain4", image:phone, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
-                    {id:"cardmain5", image:pin, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
-                    {id:"cardmain6", image:mail, mail1:"georgia.young@example.com", mail2:"georgia.young@ple.com", text:"Get Support", button:"Submit Request"},
+                    { id: "cardmain4", image: phone, mail1: "georgia.young@example.com", mail2: "georgia.young@ple.com", text: "Get Support", button: "Submit Request" },
+                    { id: "cardmain5", image: pin, mail1: "georgia.young@example.com", mail2: "georgia.young@ple.com", text: "Get Support", button: "Submit Request" },
+                    { id: "cardmain6", image: mail, mail1: "georgia.young@example.com", mail2: "georgia.young@ple.com", text: "Get Support", button: "Submit Request" },
                 ]
             },
             offer: {
@@ -82,6 +92,15 @@ import mail from "../assets/contact/mail.svg";
                 { id: "iconinsta", image: insta },
                 { id: "iconx", image: x },
             ],
+            top: {
+                title: "Innovation tailored for you",
+                subtitle: "WHAT WE DO",
+            },
+
+            infoTop: {
+                title: "Team",
+                breadcrumb: ["Home", "Team"],
+            },
         },
 
     }
