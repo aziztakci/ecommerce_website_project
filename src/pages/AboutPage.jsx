@@ -1,6 +1,7 @@
 import React from "react";
 import { useInnerData } from "../hooks/useInnerData";
 import AboutTop from "../components/aboutPage/AboutTop";
+import AboutStrip from "../components/aboutPage/AboutStrip";
 
 function AboutPage() {
   const { data, isLoading, error } = useInnerData();
@@ -15,6 +16,7 @@ function AboutPage() {
   return (
     <>
       <AboutTop aboutContent={data.about} isLoading={isLoading}/>
+      <AboutStrip aboutContent={data.about} isLoading={isLoading}/>
     </>
   );
 }

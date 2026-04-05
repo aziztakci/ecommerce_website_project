@@ -1,5 +1,5 @@
 import React from "react";
-import PageContent from "../../layout/PageContent";
+
 
 function AboutTop({aboutContent, isLoading}) {
     if (isLoading) return null;
