@@ -1,0 +1,22 @@
+import React from "react";
+import { useInnerData } from "../hooks/useInnerData";
+import AboutTop from "../components/aboutPage/AboutTop";
+
+function AboutPage() {
+  const { data, isLoading, error } = useInnerData();
+  if (isLoading)
+    return (
+      <div className="py-20 text-center text-2xl text-primary font-bold">
+        Yükleniyor...
+      </div>
+    );
+    if (error) return <div>Hata: {error.message}</div>;
+
+  return (
+    <>
+      <AboutTop aboutContent={data.about} isLoading={isLoading}/>
+    </>
+  );
+}
+
+export default AboutPage;

@@ -10,7 +10,9 @@ import mail from "../assets/contact/mail.svg";
 import main from "../assets/team/main.svg";
 import side from "../assets/team/side.svg";
 import sidetwo from "../assets/team/sidetwo.svg";
-
+import framedots from "../assets/about/framedots.svg";
+import shopping from "../assets/about/shopping.svg";
+import video from "../assets/about/video.svg";
 
 const innerData = {
     en: {
@@ -64,9 +66,9 @@ const innerData = {
                 mainImage: main,
                 images: [
                     { id: "infoImg1", image: side, },
-                    { id: "infoImg1", image: sidetwo, },
-                    { id: "infoImg1", image: sidetwo, },
-                    { id: "infoImg1", image: side, },
+                    { id: "infoImg2", image: sidetwo, },
+                    { id: "infoImg3", image: sidetwo, },
+                    { id: "infoImg4", image: side, },
                 ]
             },
 
@@ -75,12 +77,43 @@ const innerData = {
                 description: "Met minim Mollie non desert Alamo est sit cliquey dolor \n do met sent. RELIT official consequent.",
                 button: "Try it free now",
                 icons: [
-                    {id:"teamoffer1", image:x},
-                    {id:"teamoffer1", image:face},
-                    {id:"teamoffer1", image:insta},
-                    {id:"teamoffer1", image:linkedin},
+                    { id: "teamoffer1", image: x },
+                    { id: "teamoffer2", image: face },
+                    { id: "teamoffer3", image: insta },
+                    { id: "teamoffer4", image: linkedin },
                 ]
             },
+        },
+         about: {
+            top: {
+                title: "ABOUT US",
+                subtitle: "ABOUT COMPANY",
+                description: "We know how large objects will act, \n but things on a small scale",
+                button: "Get Quote Now",
+                imagebg: framedots,
+                imagefront: shopping,
+            },
+
+            strip: {
+                title: "Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.",
+                subtitle: "Problems trying",
+                description:"Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics",
+            },
+
+            infoStrip: [
+                {id:"infostrip1", value: "15K", description:"Happy Customers",},
+                {id:"infostrip2", value: "150K", description:"Monthly Visitors",},
+                {id:"infostrip3", value: "15", description:"Countries  Worldwide",},
+                {id:"infostrip4", value: "100", description: "Top Partners",},
+            ],
+
+            video: video,
+
+            upperBrandLogo: {
+                title: "Big Companies Are Here",
+                description: "Problems trying to resolve the conflict between \n the two major realms of Classical physics: Newtonian mechanics",
+            },
+
         },
     },
 
@@ -130,10 +163,10 @@ const innerData = {
             infoMain: {
                 mainImage: main,
                 images: [
-                    { id: "infoImg1", image: side, },
-                    { id: "infoImg1", image: sidetwo, },
-                    { id: "infoImg1", image: side, },
-                    { id: "infoImg1", image: sidetwo, },
+                    { id: "infoImg5", image: side, },
+                    { id: "infoImg6", image: sidetwo, },
+                    { id: "infoImg7", image: side, },
+                    { id: "infoImg8", image: sidetwo, },
                 ]
             },
 
@@ -142,13 +175,42 @@ const innerData = {
                 description: "Met minim Mollie non desert Alamo est sit cliquey dolor \n do met sent. RELIT official consequent.",
                 button: "Try it free now",
                 icons: [
-                    {id:"teamoffer1", image:x},
-                    {id:"teamoffer1", image:face},
-                    {id:"teamoffer1", image:insta},
-                    {id:"teamoffer1", image:linkedin},
+                    { id: "teamoffer5", image: x },
+                    { id: "teamoffer6", image: face },
+                    { id: "teamoffer7", image: insta },
+                    { id: "teamoffer8", image: linkedin },
                 ]
             },
+        },
+        about: {
+            top: {
+                title: "Hakkımızda",
+                subtitle: "Şirketimiz Hakkında",
+                description: "We know how large objects will act, \n but things on a small scale",
+                button: "Hemen Teklif Al",
+                imagebg: framedots,
+                imagefront: shopping,
+            },
 
+            strip: {
+                title: "Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.",
+                subtitle: "Problems trying",
+                description:"Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics",
+            },
+
+            infoStrip: [
+                {id:"infostrip5", value: "15K", description:"Mutlu Müşteriler",},
+                {id:"infostrip6", value: "150K", description:"Aylık Ziyaretçi",},
+                {id:"infostrip7", value: "15", description:"Küresel İş Ortakları",},
+                {id:"infostrip8", value: "100", description: "Ortaklar",},
+            ],
+
+            video: video,
+
+            upperBrandLogo: {
+                title: "Güçlü Şirketler Burada",
+                description: "Problems trying to resolve the conflict between \n the two major realms of Classical physics: Newtonian mechanics",
+            },
 
         },
 

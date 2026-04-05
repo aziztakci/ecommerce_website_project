@@ -7,6 +7,7 @@ import ShopPage from "./pages/ShopPage.jsx";
 import ProductDetailPage from "./pages/ProductDetailPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/product" element={<ProductDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/team" element={<TeamPage />} />
+            <Route path="/about" element={<AboutPage />} />
           </Routes>
         
       </Layout>
