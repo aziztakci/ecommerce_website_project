@@ -8,6 +8,9 @@ import ProductDetailPage from "./pages/ProductDetailPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
+import SignupPage from "./pages/SignupPage.jsx";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function App() {
@@ -22,9 +25,15 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/signup" element={<SignupPage />} />
           </Routes>
         
       </Layout>
+      <ToastContainer 
+        position="top-right" 
+        autoClose={10000} 
+        theme="colored" 
+      />
     </GlobalContextProvider>
   );
 }
