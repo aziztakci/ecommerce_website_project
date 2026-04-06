@@ -1,11 +1,13 @@
-import { SET_ROLES } from '../store/actions/globalActions';
+import { SET_ROLES } from '../actions/clientActions';
 
 const initialState = {
   roles: [], 
   user: null,
+  addressList: [],
+  creditCards: [],
 };
 
-export const globalReducer = (state = initialState, action) => {
+export const clientReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ROLES:
       return { ...state, roles: action.payload };

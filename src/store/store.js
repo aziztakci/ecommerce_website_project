@@ -1,15 +1,13 @@
-import { legacy_createStore as createStore, applyMiddleware, combineReducers } from 'redux';
+import { legacy_createStore as createStore, applyMiddleware } from 'redux';
 import { thunk } from 'redux-thunk';
-import { globalReducer } from '../reducers/globalReducer';
+import { createLogger } from 'redux-logger'; 
+import { rootReducer } from './reducers';
 
-
-const rootReducer = combineReducers({
-  global: globalReducer,
+const logger = createLogger({
+  collapsed: true, // Console kalabalık olmasın diye logları daraltır
 });
 
-
-export const store = createStore(rootReducer, applyMiddleware(thunk));
-
-
-
-
+export const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk, logger)
+);

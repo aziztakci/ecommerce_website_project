@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setRolesAction } from "../store/actions/globalActions";
+import { setRolesAction } from "../store/actions/clientActions";
 import { API } from "../api/axiosInstance";
 import { toast } from "react-toastify";
 import { Eye, EyeOff } from "lucide-react";
@@ -11,7 +11,7 @@ export default function SignupPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const roles = useSelector((state) => state.global.roles);
+  const roles = useSelector((state) => state.client.roles);
 
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
