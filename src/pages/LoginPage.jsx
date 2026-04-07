@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUserAction } from "../store/actions/clientActions";
-import { toast } from "react-toastify";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 
 export default function LoginPage() {
@@ -14,7 +13,10 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  const from = location.state?.from?.pathname || "/";
+  
+  const from = (location.state?.from === "/signup" || !location.state?.from) 
+             ? "/" 
+             : location.state?.from;
 
   const {
     register,
@@ -38,12 +40,10 @@ export default function LoginPage() {
   };
 
   useEffect(() => {
-  const token = localStorage.getItem("token");
-
-  if ((user && user.token) || token) {
-    navigate("/", { replace: true });
+  if (user && user.token) {
+    navigate(from, { replace: true });
   }
-}, [user, navigate]);
+}, [user, navigate, from]);
 
   return (
     <div className="container mx-auto py-24 px-4 max-w-lg min-h-[70vh] flex flex-col justify-center">

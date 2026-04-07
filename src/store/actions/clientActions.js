@@ -31,8 +31,12 @@ export const loginUserAction = (formData) => (dispatch) => {
     .then((res) => {
       dispatch(setUser(res.data));
       
+      
       if (formData.rememberMe) {
         localStorage.setItem("token", res.data.token);
+      } else {
+        
+        sessionStorage.setItem("token", res.data.token);
       }
       
       toast.success(`Welcome back, ${res.data.name}!`);
@@ -42,5 +46,31 @@ export const loginUserAction = (formData) => (dispatch) => {
       const errorMessage = err.response?.data?.message || "Invalid email or password!";
       toast.error(errorMessage); 
       throw err; 
+    });
+};
+
+export const verifyTokenAction = () => (dispatch) => {
+  const token = localStorage.getItem("token") || sessionStorage.getItem("token");
+
+  if (!token) return; 
+
+  return API.get("/verify")
+    .then((res) => {      
+      dispatch(setUser(res.data));      
+      
+      if (localStorage.getItem("token")) {
+        localStorage.setItem("token", res.data.token);
+      } else {
+        sessionStorage.setItem("token", res.data.token);
+      }
+      console.log("Session verified for:", res.data.name);
+    })
+    .catch((err) => {
+      console.error("Verify error:", err);
+      if (err.response?.status === 401) { 
+        localStorage.removeItem("token");
+        sessionStorage.removeItem("token");
+        dispatch(setUser({}));
+      }
     });
 };
