@@ -11,6 +11,7 @@ import AboutPage from "./pages/AboutPage.jsx";
 import SignupPage from "./pages/SignupPage.jsx";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import LoginPage from "./pages/LoginPage.jsx";
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
         
       </Layout>
