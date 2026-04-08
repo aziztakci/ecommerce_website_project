@@ -22,7 +22,7 @@ function ShopPage() {
   return (
     <section>
       <InfoTop data={data}/>
-      <CategoriesShopPage data={data}/>
+      <CategoriesShopPage/>
       <Toolbar data={data}/>
       <Products data={paginatedProducts} />
       <BrandLogos />

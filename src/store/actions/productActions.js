@@ -1,3 +1,5 @@
+import { API } from '../../api/axiosInstance';
+
 export const SET_CATEGORIES = 'SET_CATEGORIES';
 export const SET_PRODUCT_LIST = 'SET_PRODUCT_LIST';
 export const SET_TOTAL = 'SET_TOTAL';
@@ -13,3 +15,31 @@ export const setFetchState = (state) => ({ type: SET_FETCH_STATE, payload: state
 export const setLimit = (limit) => ({ type: SET_LIMIT, payload: limit });
 export const setOffset = (offset) => ({ type: SET_OFFSET, payload: offset });
 export const setFilter = (filter) => ({ type: SET_FILTER, payload: filter });
+
+
+export const fetchCategories = () => (dispatch) => {
+  dispatch(setFetchState("FETCHING"));
+  API.get('/categories')
+    .then((res) => {
+      dispatch(setCategories(res.data));
+      dispatch(setFetchState("FETCHED"));
+    })
+    .catch((err) => {
+      console.error("Kategoriler yüklenemedi:", err);
+      dispatch(setFetchState("FAILED"));
+    });
+};
+
+export const fetchProducts = (params = {}) => (dispatch) => {
+  dispatch(setFetchState("FETCHING"));
+  API.get('/products', { params })
+    .then((res) => {
+      dispatch(setProductList(res.data.products));
+      dispatch(setTotal(res.data.total));
+      dispatch(setFetchState("FETCHED"));
+    })
+    .catch((err) => {
+      console.error("Ürünler yüklenemedi:", err);
+      dispatch(setFetchState("FAILED"));
+    });
+};
