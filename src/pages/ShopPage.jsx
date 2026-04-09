@@ -23,7 +23,7 @@ function ShopPage() {
     <section>
       <InfoTop data={data}/>
       <CategoriesShopPage/>
-      <Toolbar data={data}/>
+      <Toolbar />
       <Products />
       <BrandLogos />
       <PageNumButons activePage={activePage} setActivePage={setActivePage} />
