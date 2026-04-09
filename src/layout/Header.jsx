@@ -41,6 +41,18 @@ function Header() {
   const womanCats = categories.filter((c) => c.gender === "k");
   const manCats = categories.filter((c) => c.gender === "e");
 
+  const createSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replaceAll("ı", "i")
+    .replaceAll("ö", "o")
+    .replaceAll("ü", "u")
+    .replaceAll("ş", "s")
+    .replaceAll("ç", "c")
+    .replaceAll("ğ", "g")
+    .replaceAll(" ", "-");
+};
+
   return (
     <header className="w-full max-w-360 mx-auto flex flex-wrap justify-between items-center px-8.75 pt-9 md:pl-49 md:pr-55 md:pt-0 md:my-7.5 relative z-50">
       <h1 className=" font-bold text-[24px]">{headerContent.logo}</h1>
@@ -71,7 +83,7 @@ function Header() {
                       {womanCats.map((cat) => (
                         <Link
                           key={cat.id}
-                          to={`/shop/kadin/${cat.code.split(":")[1]}/${cat.id}`}
+                          to={`/shop/kadin/${createSlug(cat.title)}/${cat.id}`}
                           className="text-second-text hover:text-primary font-medium text-[14px] transition-colors"
                         >
                           {cat.title}
@@ -85,14 +97,15 @@ function Header() {
                         Erkek
                       </h3>
                       {manCats.map((cat) => (
-                        <Link
-                          key={cat.id}
-                          to={`/shop/erkek/${cat.code.split(":")[1]}/${cat.id}`}
-                          className="text-second-text hover:text-primary font-medium text-[14px] transition-colors"
-                        >
-                          {cat.title}
-                        </Link>
-                      ))}
+                          <Link
+                            key={cat.id}
+                            to={`/shop/erkek/${createSlug(cat.title)}/${cat.id}`} 
+                            className="..."
+                          >
+                            {cat.title}
+                          </Link>
+                        )
+                      )}
                     </div>
                   </div>
                 </li>

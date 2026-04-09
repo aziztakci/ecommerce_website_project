@@ -1,32 +1,67 @@
-import React, { useState } from 'react';
-import { useShopData } from '../hooks/useShopData'; 
-import InfoTop from '../components/shopPage/InfoTop';
-import CategoriesShopPage from '../components/shopPage/CategoriesShopPage';
-import Toolbar from '../components/shopPage/Toolbar';
-import Products from '../components/shopPage/Products';
-import BrandLogos from '../components/homePage/BrandLogos';
-import PageNumButons from '../components/shopPage/PageNumButons';
-
+import React, { useEffect } from "react";
+import { useShopData } from "../hooks/useShopData";
+import InfoTop from "../components/shopPage/InfoTop";
+import CategoriesShopPage from "../components/shopPage/CategoriesShopPage";
+import Toolbar from "../components/shopPage/Toolbar";
+import Products from "../components/shopPage/Products";
+import BrandLogos from "../components/homePage/BrandLogos";
+import PageNumButons from "../components/shopPage/PageNumButons";
+import { useParams, useSearchParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts, setOffset } from "../store/actions/productActions"; 
 
 function ShopPage() {
-  const [activePage, setActivePage] = useState(1);
-  const { data, isLoading, error } = useShopData(activePage); 
+  const dispatch = useDispatch();
+  const { categoryId } = useParams();
+  const [searchParams] = useSearchParams();
+  const { limit, offset } = useSelector((state) => state.product);
 
-  if (isLoading) return <div className="py-20 text-center text-2xl text-primary font-bold">Yükleniyor...</div>;
+  useEffect(() => {
+    const urlOffset = Number(searchParams.get("offset")) || 0;
+
+    
+    if (urlOffset !== offset) {
+      dispatch(setOffset(urlOffset));
+      return; 
+    }
+
+    // 3. Parametreleri hazırla
+    const queryParams = {
+      limit: limit,
+      offset: offset, 
+    };
+
+    if (categoryId) queryParams.category = categoryId;
+    
+    const filterValue = searchParams.get("filter");
+    if (filterValue) queryParams.filter = filterValue;
+
+    const sortValue = searchParams.get("sort");
+    if (sortValue) queryParams.sort = sortValue;
+
+    console.log("API'ye giden tam paket:", queryParams);
+    dispatch(fetchProducts(queryParams));
+
+  }, [dispatch, categoryId, searchParams, limit, offset]);
+
+  const { data, isLoading, error } = useShopData();
+
+  if (isLoading)
+    return (
+      <div className="py-20 text-center text-2xl text-primary font-bold">
+        Yükleniyor...
+      </div>
+    );
   if (error) return <div>Bir hata oluştu: {error.message}</div>;
-
-  const itemsPerPage = 12;
-  const startIndex = (activePage - 1) * itemsPerPage;
-  const paginatedProducts = data.products.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <section>
-      <InfoTop data={data}/>
-      <CategoriesShopPage/>
+      <InfoTop data={data} />
+      <CategoriesShopPage />
       <Toolbar />
       <Products />
       <BrandLogos />
-      <PageNumButons activePage={activePage} setActivePage={setActivePage} />
+      <PageNumButons />
     </section>
   );
 }

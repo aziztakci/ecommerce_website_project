@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts, setOffset } from "../../store/actions/productActions";
+import { setOffset } from "../../store/actions/productActions"; 
+import { useSearchParams } from "react-router-dom";
 
 function PageNumButons() {
-  
   const dispatch = useDispatch();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const { total, limit, offset } = useSelector((state) => state.product);
   const totalPages = Math.ceil(total / limit);  
@@ -12,9 +13,19 @@ function PageNumButons() {
 
   const handlePageChange = (pageNumber) => {
     const newOffset = (pageNumber - 1) * limit;
-    dispatch(setOffset(newOffset));    
-    dispatch(fetchProducts({ limit, offset: newOffset }));
     
+    dispatch(setOffset(newOffset));     
+    
+    const newParams = new URLSearchParams(searchParams);
+    if (newOffset === 0) {
+      newParams.delete("offset");
+    } else {
+      newParams.set("offset", newOffset);
+    }
+    
+    setSearchParams(newParams);
+    
+    // 3. Sayfayı yukarı taşı
     window.scrollTo(0, 0);
   };
 
