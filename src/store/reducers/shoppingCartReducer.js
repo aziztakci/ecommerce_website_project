@@ -1,10 +1,10 @@
 import { SET_CART, SET_PAYMENT, SET_ADDRESS, TOGGLE_FAVORITE } from '../actions/shoppingCartActions';
 
 const initialState = {
-  cart: [], 
+  cart: JSON.parse(localStorage.getItem("cart")) || [], 
   payment: {},
   address: {},
-  favorites: [],
+  favorites: JSON.parse(localStorage.getItem("favorites")) || [],
 };
 
 export const shoppingCartReducer = (state = initialState, action) => {
