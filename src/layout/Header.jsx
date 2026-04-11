@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   ChevronDown,
   UserRound,
@@ -27,6 +27,19 @@ function Header() {
   const totalItemsInCart = cart.reduce((total, item) => total + item.count, 0);
   const favorites = useSelector((state) => state.shoppingCart.favorites);
   const totalFavorites = favorites.length;
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const cartRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
+        setIsCartOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     if (categories.length === 0) {
@@ -46,16 +59,20 @@ function Header() {
   const womanCats = categories.filter((c) => c.gender === "k");
   const manCats = categories.filter((c) => c.gender === "e");
 
-  const createSlug = (title) => {
-    return title
+  const createSlug = (str) => {
+    if (!str) return "urun";
+    return str
       .toLowerCase()
-      .replaceAll("ı", "i")
-      .replaceAll("ö", "o")
-      .replaceAll("ü", "u")
-      .replaceAll("ş", "s")
-      .replaceAll("ç", "c")
-      .replaceAll("ğ", "g")
-      .replaceAll(" ", "-");
+      .trim()
+      .replace(/[ğĞ]/g, "g")
+      .replace(/[üÜ]/g, "u")
+      .replace(/[şŞ]/g, "s")
+      .replace(/[ıİ]/g, "i")
+      .replace(/[öÖ]/g, "o")
+      .replace(/[çÇ]/g, "c")
+      .replace(/[^a-z0-9 -]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-");
   };
 
   return (
@@ -79,7 +96,7 @@ function Header() {
                     <ChevronDown size={14} className="ml-1" />
                   </NavLink>
 
-                  <div className="absolute hidden group-hover:flex bg-white shadow-xl border rounded-lg p-8 gap-16 top-full left-0 min-w-[450px] animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="absolute hidden group-hover:flex bg-white shadow-xl border rounded-lg p-8 gap-16 top-full left-0 min-w-112.5 animate-in fade-in slide-in-from-top-2 duration-200">
                     {/* Kadın Bölümü */}
                     <div className="flex flex-col gap-3">
                       <h3 className="font-bold text-text text-base border-b pb-2 mb-2">
@@ -206,13 +223,95 @@ function Header() {
           <span className="flex items-center text-[12px] font-medium gap-1.25 cursor-pointer">
             <Search size={19} />
           </span>
-          <Link
-            to="/cart"
-            className="flex items-center text-[12px] font-medium gap-1.25 cursor-pointer"
-          >
-            <ShoppingCart size={19} />
-            {totalItemsInCart > 0 && <span>{totalItemsInCart}</span>}
-          </Link>
+
+          {/* SEPET DROPDOWN */}
+          <div className="relative py-2" ref={cartRef}>
+            <button
+              onClick={() => setIsCartOpen(!isCartOpen)}
+              className="flex items-center text-[12px] font-medium gap-1.25 cursor-pointer text-primary outline-none"
+            >
+              <ShoppingCart size={19} />
+              {totalItemsInCart > 0 && <span>{totalItemsInCart}</span>}
+            </button>
+
+            {/* Dropdown Panel */}
+            {isCartOpen && (
+              <div className="absolute bg-white shadow-2xl border rounded-lg top-full right-0 min-w-[320px] p-4 animate-in fade-in slide-in-from-top-2 duration-200 z-100">
+                <h3 className="text-text font-bold mb-4 border-b pb-2">
+                  Sepetim ({totalItemsInCart} Ürün)
+                </h3>
+
+                <div className="max-h-75 overflow-y-auto flex flex-col gap-4">
+                  {cart.length === 0 ? (
+                    <p className="text-second-text text-sm py-4 text-center">
+                      Sepetiniz boş.
+                    </p>
+                  ) : (
+                    cart.map((item, index) => {
+                      const { product } = item;
+                      const productCategory = categories?.find(
+                        (cat) => cat.id === product.category_id,
+                      );
+                      const gender =
+                        productCategory?.gender === "k" ? "kadin" : "erkek";
+                      const categoryName = createSlug(
+                        productCategory?.title || "urun",
+                      );
+                      const productNameSlug = createSlug(product.name);
+                      const productDetailLink = `/shop/${gender}/${categoryName}/${product.category_id}/${productNameSlug}/${product.id}`;
+
+                      return (
+                        <div
+                          key={index}
+                          className="flex gap-3 items-start border-b border-light-gray-2 pb-3 last:border-0"
+                        >
+                          <img
+                            src={product.images[0]?.url}
+                            className="w-16 h-20 object-cover rounded shadow-sm"
+                            alt={product.name}
+                          />
+                          <div className="flex flex-col gap-1 flex-1">
+                            <Link
+                              to={productDetailLink}
+                              onClick={() => setIsCartOpen(false)} // Linke tıklayınca dropdown kapansın
+                              className="text-text font-bold text-xs line-clamp-2 hover:text-primary transition-colors"
+                            >
+                              {product.name}
+                            </Link>
+                            <p className="text-second-text text-[10px]">
+                              Adet: {item.count}
+                            </p>
+                            <p className="text-primary font-bold text-sm">
+                              ${(product.price * item.count).toFixed(2)}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+
+                {cart.length > 0 && (
+                  <div className="flex gap-2 mt-4 pt-2 border-t">
+                    <Link
+                      to="/cart"
+                      onClick={() => setIsCartOpen(false)}
+                      className="flex-1 text-center py-2.5 bg-white border border-primary text-primary rounded-md font-bold text-xs hover:bg-light-gray-1 transition-all"
+                    >
+                      Sepete Git
+                    </Link>
+                    <Link
+                      to="/cart"
+                      onClick={() => setIsCartOpen(false)}
+                      className="flex-1 text-center py-2.5 bg-primary text-white rounded-md font-bold text-xs hover:bg-hover transition-all"
+                    >
+                      Siparişi Tamamla
+                    </Link>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
           <Link
             to="/favorites"
             className="flex items-center text-[12px] font-medium gap-1.25 cursor-pointer"

@@ -21,8 +21,8 @@ export const addToCart = (product) => (dispatch, getState) => {
     newCart = cart.map((item, index) =>
       index === existingProductIndex ? { ...item, count: item.count + 1 } : item
     );
-  } else {
-    newCart = [...cart, { count: 1, product }];
+  } else {    
+    newCart = [...cart, { count: 1, checked: true, product }];
   }
   
   dispatch(setCart(newCart));

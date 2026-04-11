@@ -78,7 +78,7 @@ export default function FavouritesPage() {
                 key={product.id}
                 className="group bg-white border border-light-gray-2 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
               >
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative aspect-3/4 overflow-hidden">
                   <Link to={productDetailLink}>
                     <img
                       src={product.images[0]?.url}
