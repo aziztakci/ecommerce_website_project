@@ -8,7 +8,7 @@ const layoutData = {
     en: {
         header: {
             logo: "Bandage",
-            menu: ["Home", "Shop", "About", "Blog", "Contact", "Pages"],
+            menu: ["Home", "Shop", "About", "Contact", "Team"],
             menuResp: ["Home", "Product", "Pricing", "Contact"],
             auth: ["Login", "Register"]
         },
@@ -59,7 +59,7 @@ const layoutData = {
     tr: {
         header: {
             logo: "Bandage",
-            menu: ["Ana Sayfa", "Mağaza", "Hakkında", "Blog", "İletişim", "Sayfalar"],
+            menu: ["Ana Sayfa", "Mağaza", "Hakkında", "İletişim", "Ekip"],
             menuResp: ["Ana Sayfa", "Ürünler", "Fiyatlandırma", "İletişim"],
             auth: ["Giriş", "Kayıt Ol"]
         },

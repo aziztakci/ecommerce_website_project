@@ -7,13 +7,21 @@ function Products() {
   const navigate = useNavigate();
   const { productList, fetchState } = useSelector((state) => state.product);
 
-  const handleProductClick = (productId) => {
-    navigate(`/product/${productId}`);
-  };
+ const handleProductClick = (product) => {
+  const nameSlug = product.name
+    .toLowerCase()
+    .replaceAll(" ", "-")
+    .replaceAll("ı", "i")
+    .replaceAll("ö", "o")
+    .replaceAll("ü", "u")
+    .replaceAll("ş", "s")
+    .replaceAll("ç", "c")
+    .replaceAll("ğ", "g");
+  navigate(`/shop/kadin/tisort/${product.category_id}/${nameSlug}/${product.id}`);
+};
 
   return (
-    <section className="min-h-100">      
-      {/* 1. YÜKLENİYOR DURUMU (Spinner) */}
+    <section className="min-h-100">
       {fetchState === "FETCHING" && (
         <div className="flex flex-col items-center justify-center py-20">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary mb-4"></div>
@@ -25,15 +33,15 @@ function Products() {
       {fetchState === "FETCHED" && (
         <PageContent className="max-w-281 px-10 flex flex-col md:flex-row md:gap-5 md:flex-wrap md:items-center justify-center md:justify-between">
           
-          {/* KOŞUL: Eğer API'den gelen listede ürün varsa listele, yoksa mesaj göster */}
+          
           {productList.length > 0 ? (
             productList.map((e) => (
               <div
                 key={e.id}
-                onClick={() => handleProductClick(e.id)}
+                onClick={() => handleProductClick(e)}
                 className="flex flex-col w-full md:w-59.75 text-center py-12 items-center pb-12 cursor-pointer group"
               >
-                {/* Resim Alanı */}
+                
                 <div className="overflow-hidden mb-4 h-[full]">
                   <img
                     src={e.images?.[0]?.url || "https://via.placeholder.com/300"}
@@ -42,7 +50,7 @@ function Products() {
                   />
                 </div>
 
-                {/* Ürün Bilgileri */}
+                
                 <h4 className="font-montserrat font-bold text-text text-[14px] pt-5">
                   {e.name}
                 </h4>
@@ -51,7 +59,7 @@ function Products() {
                   {e.description}
                 </p>
 
-                {/* Fiyat Alanı */}
+                
                 <div className="flex gap-1.25 pt-6">                
                   <h5 className="font-montserrat font-bold text-muted text-[16px] py-1.25 line-through">
                     ${(e.price * 1.2).toFixed(2)}
@@ -61,7 +69,7 @@ function Products() {
                   </h5>
                 </div>
 
-                {/* Renk Seçenekleri (Statik Görsel) */}
+                
                 <div className="pt-5 gap-1.5 flex ">
                   <span className="h-4 w-4 rounded-full bg-primary"></span>
                   <span className="h-4 w-4 rounded-full bg-secondary-1"></span>

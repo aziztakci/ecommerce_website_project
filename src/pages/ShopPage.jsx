@@ -19,13 +19,11 @@ function ShopPage() {
   useEffect(() => {
     const urlOffset = Number(searchParams.get("offset")) || 0;
 
-    
     if (urlOffset !== offset) {
       dispatch(setOffset(urlOffset));
       return; 
     }
 
-    // 3. Parametreleri hazırla
     const queryParams = {
       limit: limit,
       offset: offset, 

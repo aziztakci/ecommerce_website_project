@@ -7,6 +7,7 @@ export const SET_FETCH_STATE = 'SET_FETCH_STATE';
 export const SET_LIMIT = 'SET_LIMIT';
 export const SET_OFFSET = 'SET_OFFSET';
 export const SET_FILTER = 'SET_FILTER';
+export const SET_PRODUCT = 'SET_PRODUCT';
 
 export const setCategories = (categories) => ({ type: SET_CATEGORIES, payload: categories });
 export const setProductList = (products) => ({ type: SET_PRODUCT_LIST, payload: products });
@@ -15,6 +16,8 @@ export const setFetchState = (state) => ({ type: SET_FETCH_STATE, payload: state
 export const setLimit = (limit) => ({ type: SET_LIMIT, payload: limit });
 export const setOffset = (offset) => ({ type: SET_OFFSET, payload: offset });
 export const setFilter = (filter) => ({ type: SET_FILTER, payload: filter });
+export const setProduct = (product) => ({ type: SET_PRODUCT, payload: product });
+
 
 
 export const fetchCategories = () => (dispatch) => {
@@ -40,6 +43,18 @@ export const fetchProducts = (params = {}) => (dispatch) => {
     })
     .catch((err) => {
       console.error("Ürünler yüklenemedi:", err);
+      dispatch(setFetchState("FAILED"));
+    });
+};
+
+export const fetchProductDetail = (productId) => (dispatch) => {
+  dispatch(setFetchState("FETCHING")); 
+  API.get(`/products/${productId}`)
+    .then((res) => {
+      dispatch(setProduct(res.data)); 
+    })
+    .catch((err) => {
+      console.error("Ürün detayı çekilemedi:", err);
       dispatch(setFetchState("FAILED"));
     });
 };
