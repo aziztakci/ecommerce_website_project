@@ -1,9 +1,10 @@
-import { SET_CART, SET_PAYMENT, SET_ADDRESS } from '../actions/shoppingCartActions';
+import { SET_CART, SET_PAYMENT, SET_ADDRESS, TOGGLE_FAVORITE } from '../actions/shoppingCartActions';
 
 const initialState = {
-  cart: [], // [{ count: 1, product: {...} }]
+  cart: [], 
   payment: {},
   address: {},
+  favorites: [],
 };
 
 export const shoppingCartReducer = (state = initialState, action) => {
@@ -12,6 +13,8 @@ export const shoppingCartReducer = (state = initialState, action) => {
       return { ...state, cart: action.payload };
     case SET_PAYMENT:
       return { ...state, payment: action.payload };
+    case TOGGLE_FAVORITE:
+      return { ...state, favorites: action.payload };
     case SET_ADDRESS:
       return { ...state, address: action.payload };
     default:

@@ -21,7 +21,12 @@ function Header() {
   const { data: layoutContent, isLoading } = useLayoutData();
   const user = useSelector((state) => state.client.user);
   const categories = useSelector((state) => state.product.categories);
+  const cart = useSelector((state) => state.shoppingCart.cart);
   const dispatch = useDispatch();
+
+  const totalItemsInCart = cart.reduce((total, item) => total + item.count, 0);
+  const favorites = useSelector((state) => state.shoppingCart.favorites);
+  const totalFavorites = favorites.length;
 
   useEffect(() => {
     if (categories.length === 0) {
@@ -42,16 +47,16 @@ function Header() {
   const manCats = categories.filter((c) => c.gender === "e");
 
   const createSlug = (title) => {
-  return title
-    .toLowerCase()
-    .replaceAll("ı", "i")
-    .replaceAll("ö", "o")
-    .replaceAll("ü", "u")
-    .replaceAll("ş", "s")
-    .replaceAll("ç", "c")
-    .replaceAll("ğ", "g")
-    .replaceAll(" ", "-");
-};
+    return title
+      .toLowerCase()
+      .replaceAll("ı", "i")
+      .replaceAll("ö", "o")
+      .replaceAll("ü", "u")
+      .replaceAll("ş", "s")
+      .replaceAll("ç", "c")
+      .replaceAll("ğ", "g")
+      .replaceAll(" ", "-");
+  };
 
   return (
     <header className="w-full max-w-360 mx-auto flex flex-wrap justify-between items-center px-8.75 pt-9 md:pl-49 md:pr-55 md:pt-0 md:my-7.5 relative z-50">
@@ -97,15 +102,14 @@ function Header() {
                         Erkek
                       </h3>
                       {manCats.map((cat) => (
-                          <Link
-                            key={cat.id}
-                            to={`/shop/erkek/${createSlug(cat.title)}/${cat.id}`} 
-                            className="..."
-                          >
-                            {cat.title}
-                          </Link>
-                        )
-                      )}
+                        <Link
+                          key={cat.id}
+                          to={`/shop/erkek/${createSlug(cat.title)}/${cat.id}`}
+                          className="..."
+                        >
+                          {cat.title}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </li>
@@ -199,15 +203,26 @@ function Header() {
         )}
 
         <div className="flex ml-7.5 gap-7.5 text-primary">
-          <span className="flex items-center text-[12px]  font-medium gap-1.25 cursor-pointer">
+          <span className="flex items-center text-[12px] font-medium gap-1.25 cursor-pointer">
             <Search size={19} />
           </span>
-          <span className="flex items-center text-[12px]  font-medium gap-1.25 cursor-pointer">
-            <ShoppingCart size={19} />1
-          </span>
-          <span className="flex items-center text-[12px]  font-medium gap-1.25 cursor-pointer">
-            <Heart size={19} />1
-          </span>
+          <Link
+            to="/cart"
+            className="flex items-center text-[12px] font-medium gap-1.25 cursor-pointer"
+          >
+            <ShoppingCart size={19} />
+            {totalItemsInCart > 0 && <span>{totalItemsInCart}</span>}
+          </Link>
+          <Link
+            to="/favorites"
+            className="flex items-center text-[12px] font-medium gap-1.25 cursor-pointer"
+          >
+            <Heart
+              size={19}
+              className={totalFavorites > 0 ? "text-alert fill-alert" : ""}
+            />
+            {totalFavorites > 0 && <span>{totalFavorites}</span>}
+          </Link>
         </div>
       </div>
 
