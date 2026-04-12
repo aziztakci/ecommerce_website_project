@@ -5,6 +5,7 @@ import {
   fetchAddresses,
   postAddress,
   updateAddressAction,
+  deleteAddressAction,
 } from "../store/actions/shoppingCartActions";
 import { Plus, User, Phone, MapPin, X } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -63,11 +64,23 @@ export default function OrderPage() {
     reset(addr);
   };
 
+  const handleDeleteAddress = (addressId, e) => {
+  e.stopPropagation();
+  if (window.confirm("Are you sure you want to delete this address?")) {
+    dispatch(deleteAddressAction(addressId)) 
+      .then(() => {        
+        if (selectedAddress?.id === addressId) {
+          setSelectedAddress(null);
+        }
+      });
+  }
+};
+
   const onAddressSubmit = (data) => {
     if (editingAddress) {
       const payload = { ...data, id: editingAddress.id };
       dispatch(updateAddressAction(payload))
-        .then(() => {          
+        .then(() => {
           if (selectedAddress?.id === editingAddress.id) {
             setSelectedAddress(payload);
           }
@@ -167,12 +180,22 @@ export default function OrderPage() {
                             {addr.title}
                           </span>
                         </div>
-                        <button
-                          onClick={(e) => handleEditAddress(addr, e)}
-                          className="text-second-text hover:text-primary transition-colors flex items-center gap-1 text-sm underline font-medium"
-                        >
-                          Edit
-                        </button>
+                        <div className="flex gap-3">
+                          {" "}
+                          {/* Butonları grupladık */}
+                          <button
+                            onClick={(e) => handleEditAddress(addr, e)}
+                            className="text-second-text hover:text-primary transition-colors flex items-center gap-1 text-sm underline font-medium"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            onClick={(e) => handleDeleteAddress(addr.id, e)}
+                            className="text-second-text hover:text-danger transition-colors flex items-center gap-1 text-sm underline font-medium"
+                          >
+                            Delete
+                          </button>
+                        </div>
                       </div>
                       <div className="space-y-1 text-sm text-text">
                         <p className="flex items-center gap-2">

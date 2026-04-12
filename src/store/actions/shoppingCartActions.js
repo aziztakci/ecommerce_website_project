@@ -70,7 +70,7 @@ export const fetchAddresses = () => (dispatch) => {
 // Ekleme (POST)
 export const postAddress = (addressData) => (dispatch) => {
   return API.post("/user/address", addressData)
-    .then((res) => {      
+    .then((res) => {
       const newAddr = res.data["0"] || res.data;
       dispatch({ type: ADD_ADDRESS, payload: newAddr });
       return res;
@@ -84,7 +84,7 @@ export const postAddress = (addressData) => (dispatch) => {
 // Güncelleme (PUT)
 export const updateAddressAction = (addressData) => (dispatch) => {
   return API.put("/user/address", addressData)
-    .then((res) => {      
+    .then((res) => {
       const updatedAddr = res.data["0"] || res.data;
       dispatch({ type: UPDATE_ADDRESS, payload: updatedAddr });
       return res;
