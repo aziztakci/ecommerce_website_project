@@ -7,10 +7,12 @@ import { Link } from "react-router-dom";
 
 export default function CartPage() {
   const cart = useSelector((state) => state.shoppingCart.cart);
-  const dispatch = useDispatch();  
+  const dispatch = useDispatch();
   const toggleCheck = (productId) => {
     const newCart = cart.map((item) =>
-      item.product.id === productId ? { ...item, checked: !item.checked } : item
+      item.product.id === productId
+        ? { ...item, checked: !item.checked }
+        : item,
     );
     dispatch(setCart(newCart));
   };
@@ -25,7 +27,7 @@ export default function CartPage() {
     });
     dispatch(setCart(newCart));
   };
-  
+
   const totalPrice = cart
     .filter((item) => item.checked)
     .reduce((sum, item) => sum + item.product.price * item.count, 0);
@@ -41,17 +43,21 @@ export default function CartPage() {
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="grow flex flex-col gap-4">
             {cart.map((item) => {
-              const { product, checked, count } = item;              
+              const { product, checked, count } = item;
               const gender = product.gender === "k" ? "kadin" : "erkek";
               const categoryName = product.categoryName || "urun";
-              const productNameSlug = product.name.toLowerCase().replace(/\s+/g, "-");
+              const productNameSlug = product.name
+                .toLowerCase()
+                .replace(/\s+/g, "-");
               const productDetailLink = `/shop/${gender}/${categoryName}/${product.category_id}/${productNameSlug}/${product.id}`;
 
               return (
                 <div
                   key={product.id}
                   className={`flex items-center gap-4 p-4 bg-white border rounded-lg shadow-sm transition-all ${
-                    checked ? "border-primary/20" : "border-light-gray-2 opacity-80"
+                    checked
+                      ? "border-primary/20"
+                      : "border-light-gray-2 opacity-80"
                   }`}
                 >
                   {/* CHECKBOX: Seçme/Kaldırma */}
@@ -127,16 +133,16 @@ export default function CartPage() {
               <span>Total</span>
               <span className="text-primary">${totalPrice.toFixed(2)}</span>
             </div>
-            <button
-              disabled={totalPrice === 0}
-              className={`w-full py-4 rounded-lg mt-6 font-bold transition-all ${
+            <Link
+              to="/order"
+              className={`w-full py-4 rounded-lg mt-6 font-bold flex justify-center items-center transition-all ${
                 totalPrice === 0
-                  ? "bg-light-gray-2 text-second-text cursor-not-allowed"
+                  ? "bg-light-gray-2 text-second-text pointer-events-none"
                   : "bg-primary text-white hover:bg-hover shadow-lg shadow-primary/20"
               }`}
             >
               Checkout
-            </button>
+            </Link>
           </div>
         </div>
       )}

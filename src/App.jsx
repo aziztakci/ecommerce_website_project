@@ -18,6 +18,7 @@ import { verifyTokenAction } from "./store/actions/clientActions";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import FavouritesPage from "./pages/FavouritesPage.jsx";
 import CartPage from "./pages/CartPage.jsx";
+import OrderPage from "./pages/OrderPage.jsx"; // Yeni ekledik
 
 export default function App() {
   const dispatch = useDispatch();
@@ -45,14 +46,17 @@ export default function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/favorites" element={<FavouritesPage />} />
+          <Route path="/cart" element={<CartPage />} /> 
+          
           <Route
-            path="/cart"
+            path="/order"
             element={
               <ProtectedRoute>
-                <CartPage />
+                <OrderPage />
               </ProtectedRoute>
             }
           />
+
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
         </Routes>

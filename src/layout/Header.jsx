@@ -60,7 +60,7 @@ function Header() {
   const manCats = categories.filter((c) => c.gender === "e");
 
   const createSlug = (str) => {
-    if (!str) return "urun";
+    if (!str) return "product";
     return str
       .toLowerCase()
       .trim()
@@ -80,7 +80,7 @@ function Header() {
       <h1 className=" font-bold text-[24px]">{headerContent.logo}</h1>
 
       <nav className="order-3 xl:order-2 w-full xl:w-auto">
-        {/* Desktop Menü */}
+        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-3.75 pt-10 xl:pt-0 items-center list-none">
           {headerContent.menu.map((e, i) => {
             const isShop = e === "Shop";
@@ -97,15 +97,15 @@ function Header() {
                   </NavLink>
 
                   <div className="absolute hidden group-hover:flex bg-white shadow-xl border rounded-lg p-8 gap-16 top-full left-0 min-w-112.5 animate-in fade-in slide-in-from-top-2 duration-200">
-                    {/* Kadın Bölümü */}
+                    {/* Women Section */}
                     <div className="flex flex-col gap-3">
                       <h3 className="font-bold text-text text-base border-b pb-2 mb-2">
-                        Kadın
+                        Women
                       </h3>
                       {womanCats.map((cat) => (
                         <Link
                           key={cat.id}
-                          to={`/shop/kadin/${createSlug(cat.title)}/${cat.id}`}
+                          to={`/shop/women/${createSlug(cat.title)}/${cat.id}`}
                           className="text-second-text hover:text-primary font-medium text-[14px] transition-colors"
                         >
                           {cat.title}
@@ -113,16 +113,16 @@ function Header() {
                       ))}
                     </div>
 
-                    {/* Erkek Bölümü */}
+                    {/* Men Section */}
                     <div className="flex flex-col gap-3">
                       <h3 className="font-bold text-text text-base border-b pb-2 mb-2">
-                        Erkek
+                        Men
                       </h3>
                       {manCats.map((cat) => (
                         <Link
                           key={cat.id}
-                          to={`/shop/erkek/${createSlug(cat.title)}/${cat.id}`}
-                          className="..."
+                          to={`/shop/men/${createSlug(cat.title)}/${cat.id}`}
+                          className="text-second-text hover:text-primary font-medium text-[14px] transition-colors"
                         >
                           {cat.title}
                         </Link>
@@ -153,7 +153,7 @@ function Header() {
           })}
         </ul>
 
-        {/* Mobil Menü */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <ul className="flex flex-col md:hidden items-center gap-7.5 py-20.75 ">
             {headerContent.menuResp.map((e, i) => {
@@ -178,7 +178,7 @@ function Header() {
         )}
       </nav>
 
-      {/* Sağ Taraf */}
+      {/* Right Side */}
       <div className="hidden md:flex order-2 xl:order-3 pt-10 min-[842px]:pt-0 gap-1 text-primary text-[14px]  font-bold items-center">
         {user && user.name ? (
           <div className="flex gap-3 items-center">
@@ -224,7 +224,7 @@ function Header() {
             <Search size={19} />
           </span>
 
-          {/* SEPET DROPDOWN */}
+          {/* CART DROPDOWN */}
           <div className="relative py-2" ref={cartRef}>
             <button
               onClick={() => setIsCartOpen(!isCartOpen)}
@@ -238,13 +238,13 @@ function Header() {
             {isCartOpen && (
               <div className="absolute bg-white shadow-2xl border rounded-lg top-full right-0 min-w-[320px] p-4 animate-in fade-in slide-in-from-top-2 duration-200 z-100">
                 <h3 className="text-text font-bold mb-4 border-b pb-2">
-                  Sepetim ({totalItemsInCart} Ürün)
+                  My Cart ({totalItemsInCart} Items)
                 </h3>
 
                 <div className="max-h-75 overflow-y-auto flex flex-col gap-4">
                   {cart.length === 0 ? (
                     <p className="text-second-text text-sm py-4 text-center">
-                      Sepetiniz boş.
+                      Your cart is empty.
                     </p>
                   ) : (
                     cart.map((item, index) => {
@@ -253,9 +253,9 @@ function Header() {
                         (cat) => cat.id === product.category_id,
                       );
                       const gender =
-                        productCategory?.gender === "k" ? "kadin" : "erkek";
+                        productCategory?.gender === "k" ? "women" : "men";
                       const categoryName = createSlug(
-                        productCategory?.title || "urun",
+                        productCategory?.title || "product",
                       );
                       const productNameSlug = createSlug(product.name);
                       const productDetailLink = `/shop/${gender}/${categoryName}/${product.category_id}/${productNameSlug}/${product.id}`;
@@ -273,13 +273,13 @@ function Header() {
                           <div className="flex flex-col gap-1 flex-1">
                             <Link
                               to={productDetailLink}
-                              onClick={() => setIsCartOpen(false)} // Linke tıklayınca dropdown kapansın
+                              onClick={() => setIsCartOpen(false)}
                               className="text-text font-bold text-xs line-clamp-2 hover:text-primary transition-colors"
                             >
                               {product.name}
                             </Link>
                             <p className="text-second-text text-[10px]">
-                              Adet: {item.count}
+                              Quantity: {item.count}
                             </p>
                             <p className="text-primary font-bold text-sm">
                               ${(product.price * item.count).toFixed(2)}
@@ -298,14 +298,14 @@ function Header() {
                       onClick={() => setIsCartOpen(false)}
                       className="flex-1 text-center py-2.5 bg-white border border-primary text-primary rounded-md font-bold text-xs hover:bg-light-gray-1 transition-all"
                     >
-                      Sepete Git
+                      Go to Cart
                     </Link>
                     <Link
-                      to="/cart"
+                      to="/order"
                       onClick={() => setIsCartOpen(false)}
                       className="flex-1 text-center py-2.5 bg-primary text-white rounded-md font-bold text-xs hover:bg-hover transition-all"
                     >
-                      Siparişi Tamamla
+                      Checkout
                     </Link>
                   </div>
                 )}
@@ -325,7 +325,7 @@ function Header() {
         </div>
       </div>
 
-      {/* Mobil Hamburger */}
+      {/* Mobile Hamburger */}
       <div className="flex gap-6.25 md:hidden">
         <span className="flex items-center text-[12px]  font-medium gap-1.25">
           <Search size={25} />
