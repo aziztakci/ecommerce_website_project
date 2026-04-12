@@ -1,9 +1,10 @@
-import { SET_CART, SET_PAYMENT, SET_ADDRESS, ADD_ADDRESS, UPDATE_ADDRESS, REMOVE_ADDRESS, TOGGLE_FAVORITE } from '../actions/shoppingCartActions';
+import { SET_CART, SET_PAYMENT, SET_ADDRESS, ADD_ADDRESS, UPDATE_ADDRESS, REMOVE_ADDRESS, TOGGLE_FAVORITE, SET_CREDIT_CARDS, ADD_CREDIT_CARD, UPDATE_CREDIT_CARD, REMOVE_CREDIT_CARD } from '../actions/shoppingCartActions';
 
 const initialState = {
   cart: JSON.parse(localStorage.getItem("cart")) || [],
   payment: {},
   address: [],
+  creditCards: [],
   favorites: JSON.parse(localStorage.getItem("favorites")) || [],
 };
 
@@ -30,6 +31,27 @@ export const shoppingCartReducer = (state = initialState, action) => {
       return {
         ...state,
         address: state.address.filter((item) => item.id !== action.payload)
+      };
+
+    case SET_CREDIT_CARDS:
+      return { ...state, creditCards: action.payload };
+    case ADD_CREDIT_CARD:
+      return { ...state, creditCards: [...state.creditCards, action.payload] };
+    case UPDATE_CREDIT_CARD:
+      return {
+        ...state,
+        creditCards: state.creditCards.map(c => c.id === action.payload.id ? action.payload : c)
+      };
+    case REMOVE_CREDIT_CARD:
+      return {
+        ...state,
+        creditCards: state.creditCards.filter(c => c.id !== action.payload)
+      };
+
+      case "CLEAR_CART":
+      return {
+        ...state,
+        cart: [], 
       };
     default:
       return state;

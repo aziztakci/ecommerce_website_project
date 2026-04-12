@@ -18,7 +18,8 @@ import { verifyTokenAction } from "./store/actions/clientActions";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import FavouritesPage from "./pages/FavouritesPage.jsx";
 import CartPage from "./pages/CartPage.jsx";
-import OrderPage from "./pages/OrderPage.jsx"; // Yeni ekledik
+import OrderPage from "./pages/OrderPage.jsx"; 
+import OrderSuccessPage from "./pages/OrderSuccessPage.jsx";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -59,6 +60,7 @@ export default function App() {
 
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/order-success" element={<OrderSuccessPage />} />
         </Routes>
       </Layout>
       <ToastContainer position="top-right" autoClose={5000} theme="colored" />
