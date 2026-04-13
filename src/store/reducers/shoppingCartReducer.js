@@ -1,4 +1,4 @@
-import { SET_CART, SET_PAYMENT, SET_ADDRESS, ADD_ADDRESS, UPDATE_ADDRESS, REMOVE_ADDRESS, TOGGLE_FAVORITE, SET_CREDIT_CARDS, ADD_CREDIT_CARD, UPDATE_CREDIT_CARD, REMOVE_CREDIT_CARD } from '../actions/shoppingCartActions';
+import {SET_ORDERS, SET_CART, SET_PAYMENT, SET_ADDRESS, ADD_ADDRESS, UPDATE_ADDRESS, REMOVE_ADDRESS, TOGGLE_FAVORITE, SET_CREDIT_CARDS, ADD_CREDIT_CARD, UPDATE_CREDIT_CARD, REMOVE_CREDIT_CARD } from '../actions/shoppingCartActions';
 
 const initialState = {
   cart: JSON.parse(localStorage.getItem("cart")) || [],
@@ -6,6 +6,7 @@ const initialState = {
   address: [],
   creditCards: [],
   favorites: JSON.parse(localStorage.getItem("favorites")) || [],
+  orders: [],  
 };
 
 export const shoppingCartReducer = (state = initialState, action) => {
@@ -53,6 +54,9 @@ export const shoppingCartReducer = (state = initialState, action) => {
         ...state,
         cart: [], 
       };
+
+      case "SET_ORDERS":
+  return { ...state, orders: action.payload };
     default:
       return state;
   }

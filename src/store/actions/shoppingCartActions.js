@@ -14,6 +14,8 @@ export const UPDATE_CREDIT_CARD = 'UPDATE_CREDIT_CARD';
 export const REMOVE_CREDIT_CARD = 'REMOVE_CREDIT_CARD';
 
 export const CLEAR_CART = 'CLEAR_CART';
+export const SET_ORDERS = 'SET_ORDERS';
+
 
 export const setPayment = (payment) => ({ type: SET_PAYMENT, payload: payment });
 export const setAddress = (addressList) => ({ type: SET_ADDRESS, payload: addressList });
@@ -159,4 +161,14 @@ export const postOrderAction = (orderData) => (dispatch) => {
       console.error("Sipariş hatası:", err);
       throw err;
     });
+};
+
+
+// Siparişleri Getirme (GET)
+export const fetchOrders = () => (dispatch) => {
+  return API.get("/order")
+    .then((res) => {      
+      dispatch({ type: SET_ORDERS, payload: res.data });
+    })
+    .catch((err) => console.error("Siparişler çekilemedi:", err));
 };

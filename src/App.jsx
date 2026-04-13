@@ -18,8 +18,9 @@ import { verifyTokenAction } from "./store/actions/clientActions";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import FavouritesPage from "./pages/FavouritesPage.jsx";
 import CartPage from "./pages/CartPage.jsx";
-import OrderPage from "./pages/OrderPage.jsx"; 
+import OrderPage from "./pages/OrderPage.jsx";
 import OrderSuccessPage from "./pages/OrderSuccessPage.jsx";
+import PreviousOrdersPage from "./pages/PreviousOrderPage.jsx";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -47,8 +48,8 @@ export default function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/favorites" element={<FavouritesPage />} />
-          <Route path="/cart" element={<CartPage />} /> 
-          
+          <Route path="/cart" element={<CartPage />} />
+
           <Route
             path="/order"
             element={
@@ -61,6 +62,14 @@ export default function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/order-success" element={<OrderSuccessPage />} />
+          <Route
+            path="/previous-orders"
+            element={
+              <ProtectedRoute>
+                <PreviousOrdersPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Layout>
       <ToastContainer position="top-right" autoClose={5000} theme="colored" />

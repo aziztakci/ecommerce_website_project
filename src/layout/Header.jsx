@@ -7,6 +7,7 @@ import {
   Heart,
   Menu,
   LogOut,
+  ShoppingBag,
 } from "lucide-react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -28,12 +29,19 @@ function Header() {
   const favorites = useSelector((state) => state.shoppingCart.favorites);
   const totalFavorites = favorites.length;
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isUserOpen, setIsUserOpen] = useState(false);
   const cartRef = useRef(null);
+  const userDropdownRef = useRef(null); 
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      
       if (cartRef.current && !cartRef.current.contains(event.target)) {
         setIsCartOpen(false);
+      }
+      
+      if (userDropdownRef.current && !userDropdownRef.current.contains(event.target)) {
+        setIsUserOpen(false);
       }
     };
 
@@ -181,23 +189,45 @@ function Header() {
       {/* Right Side */}
       <div className="hidden md:flex order-2 xl:order-3 pt-10 min-[842px]:pt-0 gap-1 text-primary text-[14px]  font-bold items-center">
         {user && user.name ? (
-          <div className="flex gap-3 items-center">
-            <div className="flex gap-2">
+          <div className="relative" ref={userDropdownRef}> {/* User menüsü sarmalayıcı */}
+            <button 
+              onClick={() => setIsUserOpen(!isUserOpen)}
+              className="flex gap-2 items-center hover:opacity-80 transition-all outline-none"
+            >
               <Gravatar
                 email={user.email}
                 size={25}
                 className="rounded-full border border-primary/10"
                 default="retro"
               />
-              <span className="text-text  text-[14px]">{user.name}</span>
-            </div>
-            <button
-              onClick={handleLogout}
-              className="flex gap-1 text-danger hover:opacity-70 transition-all cursor-pointer ml-2"
-            >
-              <LogOut size={16} />
-              <span>Logout</span>
+              <span className="text-text text-[14px]">{user.name}</span>
+              <ChevronDown size={14} className={`transition-transform ${isUserOpen ? "rotate-180" : ""}`} />
             </button>
+
+            {/* kullanıcı dropdown kısmı */}
+            {isUserOpen && (
+              <div className="absolute bg-white shadow-2xl border rounded-lg top-full right-0 min-w-[180px] py-2 mt-2 animate-in fade-in slide-in-from-top-2 duration-200 z-100">
+                <Link
+                  to="/previous-orders"
+                  onClick={() => setIsUserOpen(false)}
+                  className="flex items-center gap-2 px-4 py-2 text-second-text hover:bg-light-gray-1 hover:text-primary transition-colors text-sm font-bold"
+                >
+                  <ShoppingBag size={16} />
+                  My Orders
+                </Link>
+                <hr className="my-1 border-light-gray-2" />
+                <button
+                  onClick={() => {
+                    handleLogout();
+                    setIsUserOpen(false);
+                  }}
+                  className="w-full flex items-center gap-2 px-4 py-2 text-danger hover:bg-red-50 transition-colors text-sm font-bold"
+                >
+                  <LogOut size={16} />
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         ) : (
           <>
@@ -234,7 +264,7 @@ function Header() {
               {totalItemsInCart > 0 && <span>{totalItemsInCart}</span>}
             </button>
 
-            {/* Dropdown Panel */}
+            {/* Siparişler (cart kısmı için) Dropdown Panel */}
             {isCartOpen && (
               <div className="absolute bg-white shadow-2xl border rounded-lg top-full right-0 min-w-[320px] p-4 animate-in fade-in slide-in-from-top-2 duration-200 z-100">
                 <h3 className="text-text font-bold mb-4 border-b pb-2">
